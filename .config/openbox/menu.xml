@@ -19,7 +19,12 @@
 		<!-- This requires the presence of the 'openbox-menu' package to work -->
 		<menu id="/Debian"/>
 		<separator/>
-		<menu execute="/usr/bin/obamenu" id="applications-menu" label="Applications"/>
+		<!--<menu execute="/home/robin/Scripts/obamenu.py" id="applications-menu" label="Applications"/>-->
+		<item label="Search">
+			<action name="Execute">
+				<execute>rofi -show drun</execute>
+			</action>
+		</item>
 		<separator/>
 		<item label="Appearance">
 			<action name="Execute">

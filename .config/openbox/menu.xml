@@ -1,60 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
 	<menu id="root-menu" label="Openbox 3">
-		<item label="Terminal">
+		<item icon="/usr/share/icons/Humanity/apps/48/terminal.svg" label="Terminal">
 			<action name="Execute">
 				<execute>x-terminal-emulator</execute>
 			</action>
 		</item>
-		<item label="File explorer">
+		<item icon="/usr/share/icons/Humanity/apps/48/system-file-manager.svg" label="File explorer">
 			<action name="Execute">
 				<execute>pcmanfm</execute>
 			</action>
 		</item>
-		<item label="Web browser">
+		<item icon="/usr/share/icons/Humanity/apps/48/browser.svg" label="Web browser">
 			<action name="Execute">
 				<execute>x-www-browser</execute>
 			</action>
 		</item>
 		<!-- This requires the presence of the 'openbox-menu' package to work -->
-		<menu id="/Debian"/>
 		<separator/>
-		<!--<menu execute="/home/robin/Scripts/obamenu.py" id="applications-menu" label="Applications"/>-->
-		<item label="Search">
+		<item icon="/usr/share/icons/Humanity/apps/48/computerjanitor.svg" label="Search">
 			<action name="Execute">
 				<execute>rofi -show drun</execute>
 			</action>
 		</item>
+		<!--<menu execute="/home/robin/Scripts/obamenu.py" id="applications-menu" label="Applications"/>-->
 		<separator/>
-		<item label="Appearance">
-			<action name="Execute">
-				<execute>lxappearance</execute>
-			</action>
-		</item>
-		<item label="Openbox">
-			<action name="Execute">
-				<execute>obconf</execute>
-			</action>
-		</item>
-		<item label="Menu">
-			<action name="Execute">
-				<execute>obmenu</execute>
-			</action>
-		</item>
-		<item label="Wallpapers">
+		<item icon="/usr/share/icons/Humanity/apps/48/xfce4-backdrop.svg" label="Change wallpaper">
 			<action name="Execute">
 				<execute>nitrogen</execute>
 			</action>
 		</item>
 		<separator/>
-		<item label="Shutdown">
+		<menu icon="/usr/share/icons/Humanity/apps/48/control-center2.svg" id="root-menu-945915" label="Openbox">
+			<item icon="/usr/share/icons/Humanity/apps/48/preferences-system-windows.svg" label="Configuration">
+				<action name="Execute">
+					<execute>obconf</execute>
+				</action>
+			</item>
+			<item icon="/usr/share/icons/Humanity/apps/48/preferences-theme.svg" label="Appearance">
+				<action name="Execute">
+					<execute>lxappearance</execute>
+				</action>
+			</item>
+			<item icon="/usr/share/icons/Humanity/apps/48/alacarte.svg" label="Menu">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<item icon="/usr/share/icons/Humanity/apps/48/un-reboot.svg" label="Reconfigure">
+				<action name="Execute">
+					<execute>openbox --reconfigure</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<item icon="/usr/share/icons/Humanity/apps/48/system-shutdown.svg" label="Shutdown">
 			<action name="Execute">
-				<execute>shutdown now</execute>
+				<execute>~/Scripts/shutdown.sh</execute>
 			</action>
 		</item>
-		<item label="Reboot">
+		<item icon="/usr/share/icons/Humanity/apps/48/system-restart.svg" label="Reboot">
 			<action name="Execute">
-				<execute>reboot</execute>
+				<execute>~/Scripts/reboot.sh</execute>
 			</action>
 		</item>
 	</menu>

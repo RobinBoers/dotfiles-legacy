@@ -92,6 +92,32 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias meow='cat'
+
+alias rm='rm -i'
+alias cp='cp -i'
+
+alias home='cd ~'
+alias root='cd /'
+
+alias ..='cd ..'
+alias ...='cd ..; cd ..;'
+alias ....='cd ..; cd ..; cd ..'
+
+alias python='python3'
+alias pip='pip3'
+
+export EDITOR=vim
+alias vimrc='vim .vimrc'
+alias bashrc='vim .bashrc'
+
+alias neo='neofetch'
+
+alias givm='gvim'
+alias cta='cat'
+alias gerp='grep'
+alias sl='ls'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -116,4 +142,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# eval "$(starship init bash)"
+eval "$(starship init bash)"
+
+clear
+#export PS1=$
+free="36732 BASIC BYTES FREE"
+echo
+echo "         "\*\*\*\*  BASH $BASH_VERSION \*\*\*\*
+echo
+echo "     6K RAM SYSTEM " $free
+echo
+echo READY.
+echo

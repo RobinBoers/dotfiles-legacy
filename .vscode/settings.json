@@ -1,0 +1,32 @@
+// 
+//   ____       _     _
+//  |  _ \ ___ | |__ (_)_ __
+//  | |_) / _ \| '_ \| | '_ \
+//  |  _ < (_) | |_) | | | | |
+//  |_| \_\___/|_.__/|_|_| |_|
+//  
+// This file is part of Robijntjes dotfiles
+//
+{
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Nord",
+    "extensions.ignoreRecommendations": true,
+    "git.autofetch": true,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "editor.fontSize": 21,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": true,
+    "editor.autoClosingBrackets": "always",
+    "editor.formatOnType": true,
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "html.autoClosingTags": true,
+    "html.format.enable": true,
+    "html.validate.scripts": true,
+    "html.suggest.html5": true
+}

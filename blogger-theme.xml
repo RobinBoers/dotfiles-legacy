@@ -21,6 +21,7 @@
 <Variable name="robotoBold22" description="Roboto Bold 22" type="font" default="bold 22px Roboto, sans-serif" hideEditor="true"  value="bold 22px Roboto, sans-serif"/>
 <Variable name="robotoBold30" description="Roboto Bold 30" type="font" default="bold 30px Roboto, sans-serif" hideEditor="true"  value="bold 30px Roboto, sans-serif"/>
 <Variable name="robotoBold45" description="Roboto Bold 45" type="font" default="bold 45px Roboto, sans-serif" hideEditor="true"  value="bold 45px Roboto, sans-serif"/>
+<Variable name="robotoBold55" description="Roboto Bold 55" type="font" default="bold 55px Roboto, sans-serif" hideEditor="true"  value="bold 55px Roboto, sans-serif"/>
 
 <!-- Variable definitions -->
 
@@ -75,14 +76,14 @@
 <Group description="Blog title" selector="div.widget.Header">
   <Variable name="blog.title.font" description="Font"
       type="font"
-      default="$(robotoBold45)"  value="normal bold 45px Gruppo"/>
+      default="$(robotoBold55)"  value="normal bold 55px Gruppo"/>
   <Variable name="blog.title.color" description="Color"
       type="color"
-      default="#fff"  value="#ffffff"/>
+      default="#444444"  value="#444444"/>
   <Variable name="header.icons.color"
       description="Background icons color"
       type="color"
-      default="#fff"  value="#ffffff"/>
+      default="#444444"  value="#444444"/>
 </Group>
 
 <Group description="Tabs text" selector="div.widget.PageList">
@@ -93,16 +94,16 @@
       default="700 normal $(size) $(family)"  value="700 normal $(size) $(family)"/>
   <Variable name="tabs.color" description="Text color"
       type="color"
-      default="#ccc"  value="#cccccc"/>
+      default="#757575"  value="#757575"/>
   <Variable name="tabs.selected.color" description="Selected color"
       type="color"
-      default="#fff"  value="#ffffff"/>
+      default="#444444"  value="#444444"/>
   <Variable name="tabs.overflow.background.color" description="Popup background color"
       type="color"
-      default="$(posts.background.color)"  value="#ffffff"/>
+      default="$(posts.background.color)"  value="#444444"/>
   <Variable name="tabs.overflow.color" description="Popup text color"
       type="color"
-      default="$(posts.text.color)"  value="#757575"/>
+      default="$(posts.text.color)"  value="#444444"/>
   <Variable name="tabs.overflow.selected.color" description="Popup selected color"
       type="color"
       default="$(posts.title.color)"  value="#232323"/>
@@ -142,13 +143,13 @@
 <Group description="Search">
   <Variable name="search.input.color" description="Input color"
       type="color"
-      default="$(blog.title.color)"  value="#ffffff"/>
+      default="$(blog.title.color)"  value="#444444"/>
   <Variable name="search.input.font" description="Input font"
       type="font"
       default="$(robotoNormal16)"  value="16px Roboto, sans-serif"/>
   <Variable name="search.placeholder.color" description="Placeholder text color"
       type="color"
-      default="$(blog.title.color)"  value="#ffffff"/>
+      default="$(blog.title.color)"  value="#444444"/>
 </Group>
 
 <Group description="Sharing">
@@ -1563,7 +1564,8 @@ width:100%;
 z-index:1
 }
 .bg-photo{
-background:$(body.background);
+/*background:$(body.background);*/
+background: none !important;
 background-attachment:scroll;
 background-size:cover;
 -webkit-filter:blur($(body.background.blur));
@@ -1575,7 +1577,7 @@ top:$(0 - body.background.blur);
 width:calc(100% + 2 * $(body.background.blur))
 }
 .bg-photo-overlay{
-background:rgba(0,0,0,.26);
+/*background:rgba(0,0,0,.06);*/
 background-size:cover;
 height:$(body.background.height);
 position:absolute;
@@ -1900,6 +1902,7 @@ width:calc(100% - 176px)
 .Header h1{
 color:$(blog.title.color);
 font: Arial;
+font-size: 48px;
 line-height:normal;
 margin:0 0 13px 0;
 text-align:center;
@@ -1924,7 +1927,8 @@ color:$(posts.text.color)
 color:$(blog.title.color);
 margin:0 0 13px 0;
 opacity:.8;
-text-align:center
+text-align:center;
+font-size: 16px;
 }
 .widget .title{
 line-height:28px

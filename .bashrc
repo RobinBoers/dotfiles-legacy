@@ -93,6 +93,9 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias meow='cat'
+alias hack='ping'
+alias monitor='ping'
+alias pling='ping -c 30'
 
 alias rm='rm -i'
 alias cp='cp -i'
@@ -117,6 +120,8 @@ alias givm='gvim'
 alias cta='cat'
 alias gerp='grep'
 alias sl='ls'
+alias clea='clear'
+alias clar='clear'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

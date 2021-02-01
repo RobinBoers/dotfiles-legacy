@@ -40,6 +40,15 @@ case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
 esac
 
+function getIPAddress() {
+        local ip_route
+        ip_route=$(ip -4 route get 8.8.8.8 2>/dev/null)
+        if [[ -z "$ip_route" ]]; then
+                ip_route=$(ip -6 route get 2001:4860:4860::8888 2>/dev/null)
+        fi
+        [[ -n "$ip_route" ]] && grep -oP "src \K[^\s]+" <<< "$ip_route"
+}
+
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
@@ -57,16 +66,16 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@$(getIPAddress)\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+        PS1='${debian_chroot:+($debian_chroot)}\u@$(getIPAddress):\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@$(getIPAddress): \w\a\]$PS1"
     ;;
 *)
     ;;
@@ -111,8 +120,8 @@ alias python='python3'
 alias pip='pip3'
 
 export EDITOR=vim
-alias vimrc='vim .vimrc'
-alias bashrc='vim .bashrc'
+alias vimrc='vim ~/.vimrc'
+alias bashrc='vim ~/.bashrc'
 
 alias neo='neofetch'
 
@@ -122,6 +131,7 @@ alias gerp='grep'
 alias sl='ls'
 alias clea='clear'
 alias clar='clear'
+alias cmatri='cmatrix'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -151,11 +161,11 @@ eval "$(starship init bash)"
 
 clear
 #export PS1=$
-free="36732 BASIC BYTES FREE"
+free="$(grep MemTotal /proc/meminfo | awk {'print $2'}) BASIC BYTES FREE"
 echo
 echo "         "\*\*\*\*  BASH $BASH_VERSION \*\*\*\*
 echo
-echo "     6K RAM SYSTEM " $free
+echo "   $(grep MemFree /proc/meminfo | awk {'print $2'})K RAM SYSTEM " $free
 echo
 echo READY.
 echo

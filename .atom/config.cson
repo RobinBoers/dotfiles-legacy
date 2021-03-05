@@ -1,0 +1,22 @@
+"*":
+  "bracket-matcher": {}
+  core:
+    autoHideMenuBar: true
+    projectHome: "C:\\xampp\\htdocs\\GitHub"
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "nord-atom-syntax"
+    ]
+    uriHandlerRegistration: "always"
+  editor:
+    defaultFontSize: 21
+    fontSize: 18
+    softWrap: true
+  "exception-reporting":
+    userId: "6e6819c1-8acb-4528-aa9d-4d3411652c9a"
+  kite:
+    showWelcomeNotificationOnStartup: false
+  minimap: {}
+  welcome:
+    showOnStartup: false

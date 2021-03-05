@@ -1,0 +1,44 @@
+{
+  "_from": "https://www.atom.io/api/packages/css-helper-snippets/versions/0.3.0/tarball",
+  "_id": "css-helper-snippets@0.3.0",
+  "_inBundle": false,
+  "_integrity": "sha512-uHMNY6l22oTtqoN3i5YOGA0quUXDdUu0aSD3AfGO0Dj/YOurcyOfESGfEy9DmNrF8bbSDXu2mdV4MPWdEImGiw==",
+  "_location": "/css-helper-snippets",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://www.atom.io/api/packages/css-helper-snippets/versions/0.3.0/tarball",
+    "rawSpec": "https://www.atom.io/api/packages/css-helper-snippets/versions/0.3.0/tarball",
+    "saveSpec": "https://www.atom.io/api/packages/css-helper-snippets/versions/0.3.0/tarball",
+    "fetchSpec": "https://www.atom.io/api/packages/css-helper-snippets/versions/0.3.0/tarball"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://www.atom.io/api/packages/css-helper-snippets/versions/0.3.0/tarball",
+  "_shasum": "f4857171c08186bf4a4d5781ff76516af42da62d",
+  "_spec": "https://www.atom.io/api/packages/css-helper-snippets/versions/0.3.0/tarball",
+  "_where": "C:\\Users\\Robin\\AppData\\Local\\Temp\\apm-install-dir-2021116-15672-jel4c3.thlol",
+  "bugs": {
+    "url": "https://github.com/VladimirIvanin/css-helper-snippets/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "css-helper-snippets",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/VladimirIvanin/css-helper-snippets#readme",
+  "keywords": [
+    "css"
+  ],
+  "license": "MIT",
+  "name": "css-helper-snippets",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirIvanin/css-helper-snippets.git"
+  },
+  "version": "0.3.0"
+}

@@ -1,0 +1,7 @@
+'.source.sass, .source.css.sass, .source.css, .source.css.liquid, .source.scss.liquid, .source.scss, .source.css.scss, .source.less, .source.css.less':
+  'after inline-block':
+    'prefix': 'afterinbl'
+    'body': """
+      content: '';
+      display: inline-block;
+    """

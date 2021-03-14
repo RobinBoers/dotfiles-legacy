@@ -9,6 +9,7 @@
 //
 {
     "window.zoomLevel": 0,
+    "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Nord",
     "extensions.ignoreRecommendations": true,
     "git.autofetch": true,
@@ -28,5 +29,7 @@
     "html.autoClosingTags": true,
     "html.format.enable": true,
     "html.validate.scripts": true,
-    "html.suggest.html5": true
+    "html.suggest.html5": true,
+    "window.titleBarStyle": "custom",
+    "window.restoreFullscreen": true
 }

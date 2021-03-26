@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(2) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -124,6 +124,12 @@ alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 
 alias neo='neofetch'
+alias shotcut='flatpak run org.shotcut.Shotcut'
+alias xampp='sudo /opt/lampp/manager-linux-x64.run'
+alias lampp='sudo /opt/lampp/manager-linux-x64.run'
+alias wampp='sudo /opt/lampp/manager-linux-x64.run'
+alias rootfiles='sudo io.elementary.files-pkexec'
+alias pipes='colorscript -e pipes2-slim'
 
 alias givm='gvim'
 alias cta='cat'
@@ -157,15 +163,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
+
+dwall -s aurora
 
 clear
-#export PS1=$
-free="$(grep MemTotal /proc/meminfo | awk {'print $2'}) BASIC BYTES FREE"
-echo
-echo "         "\*\*\*\*  BASH $BASH_VERSION \*\*\*\*
-echo
-echo "   $(grep MemFree /proc/meminfo | awk {'print $2'})K RAM SYSTEM " $free
-echo
-echo READY.
-echo
+colorscript -r

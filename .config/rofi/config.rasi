@@ -3,6 +3,12 @@
  * User: Qball
  * Copyright: Dave Davenport
  */
+
+configuration {
+  show-icons:         true;
+  icon-theme:         "Papirus";
+}
+
 * {
     selected-normal-foreground:  rgba ( 245, 245, 245, 100 % );
     foreground:                  rgba ( 0, 43, 54, 100 % );
@@ -34,32 +40,43 @@
     active-background:           rgba ( 245, 245, 245, 100 % );
     selected-active-background:  rgba ( 0, 95, 135, 100 % );
 }
-#window {
+/*#window {
     background-color: @background;
     padding:          20px;
-}
+}*/
 #mainbox {
     border:  0;
     padding: 0;
+    spacing: 10;
 }
 #message {
     border:       2px 0px 0px ;
     border-color: @separatorcolor;
+    background: @background;
+    padding: 20px;
     padding:      1px ;
 }
 #textbox {
     text-color: @foreground;
 }
+element-icon { size: 2ch ; }
 #listview {
     fixed-height: 0;
     border-color: @separatorcolor;
     spacing:      2px ;
     scrollbar:    true;
-    padding:      7px 0px 0px ;
+    padding:      6px ;
+    background-color: @background;
+}
+#icon {
+    width: 10px;
+    height: 10px;
 }
 #element {
     border:  0;
     padding: 6px ;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 #element.normal {
     background-color: @normal-background;
@@ -86,9 +103,9 @@
     text-color:       @selected-active-foreground;
 }
 #scrollbar {
-    width:        4px ;
+    width:        0 ;
     border:       0;
-    handle-width: 8px ;
+    handle-width: 0 ;
     padding:      0;
 }
 #mode-switcher {
@@ -102,7 +119,6 @@
 #inputbar {
     spacing:    0;
     text-color: @normal-foreground;
-    padding:    1px ;
 }
 #case-indicator {
     spacing:    0;
@@ -118,6 +134,8 @@
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    background-color: @background;
+    padding: 20px;
 }
 #textbox-prompt-colon {
     expand:     false;

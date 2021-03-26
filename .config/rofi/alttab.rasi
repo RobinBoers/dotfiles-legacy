@@ -1,0 +1,128 @@
+/*
+ * Made by Robijntje (RobinBoers), based on an theme by Aditya Shakya.
+ *
+ */
+
+configuration {
+	font:							"Noto Sans 10";
+    show-icons:                     true;
+	icon-theme: 					"Papirus";
+    display-drun: 					"";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+    fullscreen:                     false;
+	hide-scrollbar: 				true;
+	sidebar-mode: 					false;
+}
+
+/* -- Light -- */
+/*
+* {
+    background:                     #e5e5e5ff;
+    background-alt:              	#00000000;
+    background-bar:                 #FFFFFFFF;
+    foreground:                     #000000A6;
+    accent:			            	#80808066;
+    border:		               		#1A73E9FF;
+    selected:               		#D7D7D7FF;
+}
+*/
+
+/* -- Dark -- */
+
+* {
+    background:                     #212121ff;
+    background-alt:              	#00000000;
+    background-bar:                 #151515FF;
+    foreground:                     #EDEDEDFF;
+    accent:			            	#EDEDED4d;
+    border:		               		#1A73E9FF;
+    selected:               		#151515ff;
+}
+
+
+window {
+    transparency:                   "real";
+    background-color:               @background;
+    text-color:                     @foreground;
+	border:							0px;
+	border-color:					@border;
+    border-radius:                  0px;
+	width:							70%;
+    location:                       center;
+    x-offset:                       0;
+    y-offset:                       0;
+}
+
+prompt {
+    visible:                        false;
+    enabled: 						false;
+	padding: 						0%;
+	background-color: 				@background;
+	text-color: 					@background;
+	font:							"FantasqueSansMono Nerd Font 12";
+}
+
+entry {
+    blink:                          false;
+    border:                         0px;
+    background-color: 				@background;
+	text-color: 					@foreground;
+    enabled:                        false;
+}
+
+inputbar {
+    background-color: 				@background;
+	text-color: 					@background;
+    border: 0px;
+    enabled:                        false;
+}
+
+listview {
+    background-color:               @background-alt;
+    columns:                        10;
+    lines:	                        1;
+    spacing:                        0%;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @background-alt;
+	border:							0% 0% 0% 0%;
+    border-radius:                  0% 0% 0% 0%;
+	border-color:					@accent;
+    children:                       [ inputbar, listview ];
+    spacing:                       	1.5%;
+    padding:                        2% 1% 2% 1%;
+}
+
+element {
+    background-color:               @background-alt;
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  0%;
+    padding:                        2.5% 0% 2.5% 0%;
+}
+
+element-icon {
+    size:                           50px;
+    border:                         0px;
+}
+
+element-text {
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0.5% 0.5% -0.5% 0.5%;
+    enabled:                        false;
+}
+
+element selected {
+    background-color:               @selected;
+    text-color:                     @foreground;
+	border:							0% 0% 0.3% 0%;
+    border-radius:                  0px;
+    border-color:                  	@border;
+}

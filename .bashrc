@@ -165,7 +165,5 @@ fi
 
 #eval "$(starship init bash)"
 
-dwall -s aurora
-
-clear
-colorscript -r
+shopt -s expand_aliases
+source ~/.bash_aliases

@@ -7,8 +7,13 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 5
+        colors = false 
+        markup = pango
+        interval = 3
+        output_format = "i3bar"
+        color_good = '#2f343f'
+		color_degraded = '#ebcb8b'
+		color_bad = '#ba5e57'
 }
 
 #order += "ipv6"
@@ -23,42 +28,42 @@ order += "tztime local"
 #order += "cpu_usage"
 
 wireless _first_ {
-        format_up = "W: %essid: %ip (%quality)"
-        format_down = "W: down"
+        format_up = "<span background='#a3be8c'> %essid: %ip </span>"
+        format_down = "<span background='#ff5555'> Disconnected </span>"
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+        format_up = "<span background='#a3be8c'> %ip (%speed)</span>"
+        format_down = "<span background='#ff5555'> Disconnected</span>"
 }
 
 battery all {
-        format = "%status %percentage"
+        format = "<span background='#f59335'> %status %percentage </span>"
         format_down = "No battery"
-        status_chr = "⚡ CHR"
-        status_bat = "🔋 BAT"
-        status_unk = "? UNK"
-        status_full = "☻ FULL"
+        status_chr = "CHR"
+        status_bat = "BAT"
+        status_unk = "UNK"
+        status_full = "FULL"
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
 }
 
 cpu_usage {
-format = "CPU %usage {%cpu0 %cpu1}"
-max_threshold = 75
+        format = "CPU %usage {%cpu0 %cpu1}"
+        max_threshold = 75
 }
 
 volume master {
-format = "♪: %volume"
-format_muted = "♪: muted (%volume)"
+        format = "<span background='#ebcb8b'> ♪ %volume </span>"
+        format_muted = "<span background='#ff5555'> ♪ muted (%volume) </span>"
 }
 
 disk "/" {
-        format = "%avail"
+        format = "<span background='#bd93f9'> %avail Available </span>"
 }
 
 load {
-        format = "%1min"
+        format = " 🔥 %5min Load "
 }
 
 memory {
@@ -68,5 +73,6 @@ memory {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "<span background='#81a1c1'> %time </span>"
+        format_time = "%Y-%m-%d %H:%M"
 }

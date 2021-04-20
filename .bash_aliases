@@ -25,7 +25,10 @@ export EDITOR=vim
 alias bash_aliases='vim ~/.bash_aliases'
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
+alias fishrc='vim ~/.config/fish/config.fish'
 alias vim='nvim'
+
+alias :q="exit"
 
 alias neo='neofetch'
 alias shotcut='flatpak run org.shotcut.Shotcut'

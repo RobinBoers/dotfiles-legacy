@@ -14,6 +14,8 @@ set mat=2
 set background=dark
 set hidden
 
+set clipboard+=unnamedplus
+
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
@@ -86,7 +88,7 @@ endtry
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+"autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 " NERDTree Configuration
 let NERDTreeShowHidden = 1
@@ -107,6 +109,8 @@ let g:lightline = {
         \   'gitbranch': 'gitbranch#name'
         \ }
         \ }
+
+set guifont=SourceCodePro\ Font:h18
 
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.

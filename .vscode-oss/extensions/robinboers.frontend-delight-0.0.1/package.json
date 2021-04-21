@@ -1,0 +1,27 @@
+{
+	"name": "frontend-delight",
+	"displayName": "Frontend Delight",
+	"description": "Frontend Delight color scheme for VSCode",
+	"author": "Robin Boers",
+	"publisher": "RobinBoers",
+	"repository": "https://github.com/RobinBoers/frontend-delight",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Frondend Delight",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Frondend Delight-color-theme.json"
+			}
+		]
+	},
+	"__metadata": {
+		"installedTimestamp": 1619031940689
+	}
+}

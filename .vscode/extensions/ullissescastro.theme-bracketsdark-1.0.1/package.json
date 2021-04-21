@@ -1,0 +1,35 @@
+{
+	"name": "theme-bracketsdark",
+	"displayName": "Brackets Dark",
+	"description": "Brackets.io Color Scheme",
+	"version": "1.0.1",
+	"publisher": "ullissescastro",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"icon": "icon.png",
+	"keywords": [
+		"brackets",
+		"theme",
+		"dark"
+	],
+	"galleryBanner": {
+		"color": "#B580D9",
+		"theme": "dark"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Brackets Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Brackets Dark.tmTheme"
+			}
+		]
+	},
+	"__metadata": {
+		"installedTimestamp": 1617616348457
+	}
+}

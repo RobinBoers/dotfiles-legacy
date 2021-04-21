@@ -13,7 +13,7 @@ import os
 import subprocess
 
 mod = "mod4"            # Make Super the mod key
-terminal = "konsole"    # Set default terminal emulator
+terminal = "alacritty"    # Set default terminal emulator
 browser = "firefox"     # Set default webbrowser
 
 def latest_group(qtile):
@@ -164,14 +164,14 @@ layouts = [
 
 # Panel / bar at the top of the screen
 
-colors = [["#2f343f", "#2f343f"], # panel background V
-          ["#bf616a", "#bf616a"], # background for current screen tab V
-          ["#d8dee8", "#d8dee8"], # font color for group names V
-          ["#8f4950", "#8f4950"], # border line color for current tab 
-          ["#8f4950", "#8f4950"], # border line color for 'other tabs' and color for 'odd widgets'
-          ["#ebcb8b", "#ebcb8b"], # color for the 'even widgets'
-          ["#d8dee8", "#d8dee8"], # window name
-          ["#a2a7ae", "#a2a7ae"]] # backbround for inactive screens
+colors = [["#1b1c1d", "#1b1c1d"], # background color
+          ["#f74319", "#f74319"], # background for selected workspace
+          ["#ffffff", "#ffffff"], # foreground color
+          ["#74ec4c", "#74ec4c"], # green
+          ["#2c70b7", "#2c70b7"], # blue
+          ["#fdc325", "#fdc325"], # yellow
+          ["#adadad", "#adadad"], # window name color
+          ["#565747", "#565747"]] # foreground color for inactive workspace
 
 widget_defaults = dict(
     font='Ubuntu Bold',

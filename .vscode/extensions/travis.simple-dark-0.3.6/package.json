@@ -1,0 +1,52 @@
+{
+	"name": "simple-dark",
+	"displayName": "Simple Dark",
+	"publisher": "travis",
+	"description": "This one is Simple Dark Theme for VSCode",
+	"version": "0.3.6",
+	"icon": "logo.png",
+	"keywords": [
+		"vscode theme",
+		"theme simple",
+		"simple dark",
+		"dark theme",
+		"dark",
+		"dark simple",
+		"theme dark"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/HondryTravis/simple-dark.git"
+	},
+	"engines": {
+		"vscode": "^1.38.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"scripts": {
+		"start": "nodemon --watch './packages/**/*.js' --exec 'npm run build'",
+		"build": "node build.js",
+		"deploy": "sh scripts/deploy.sh",
+		"theme:build": "vsce package",
+		"theme:publish": "vsce publish"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Simple Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/Simple Dark-color-theme.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.6"
+	},
+	"__metadata": {
+		"id": "4adca1e5-e656-4410-ab18-bce3bfced666",
+		"publisherId": "9f29fff0-5ac2-4ee0-8e4b-1b713be45e05",
+		"publisherDisplayName": null,
+		"installedTimestamp": 1617615972949
+	}
+}

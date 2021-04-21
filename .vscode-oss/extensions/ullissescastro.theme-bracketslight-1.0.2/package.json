@@ -1,0 +1,35 @@
+{
+	"name": "theme-bracketslight",
+	"displayName": "Brackets Light",
+	"description": "Brackets.io Color Scheme",
+	"version": "1.0.2",
+	"publisher": "ullissescastro",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"icon": "icon.png",
+	"keywords": [
+		"brackets",
+		"theme",
+		"light"
+	],
+	"galleryBanner": {
+		"color": "#B580D9",
+		"theme": "light"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Brackets Light",
+				"uiTheme": "vs",
+				"path": "./themes/Brackets Light.tmTheme"
+			}
+		]
+	},
+	"__metadata": {
+		"installedTimestamp": 1617616354708
+	}
+}

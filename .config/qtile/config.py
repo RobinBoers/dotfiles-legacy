@@ -191,6 +191,7 @@ screens = [
                        padding_x = 5,
                        borderwidth = 0,
                        active = colors[2],
+                       block_highlight_text_color = colors[2],
                        inactive = colors[7],
                        rounded = False,
                        highlight_color = colors[1],

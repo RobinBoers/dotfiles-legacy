@@ -1,0 +1,10 @@
+# Do not insert a blank line between shell prompts
+add_newline = false
+
+# Disable 2 line prompt
+[line_break]
+disabled = true
+
+# Disable git (because I dont want it to show git :))
+[git_state]
+disabled = true

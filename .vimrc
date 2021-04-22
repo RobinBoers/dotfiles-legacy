@@ -6,14 +6,16 @@ set ruler           " Show where cursor is
 set mouse=a
 set noshowmode
 set backspace=indent,eol,start
-set termguicolors
+set notermguicolors
 set cmdheight=1     " Height of the cmdline area
-set hid             " Buffer is hidden after you're done
-set showmatch        " Show brackets when text indicator is over them
+set showmatch       " Show brackets when text indicator is over them
 set mat=2
 set background=dark
 set hidden
 
+
+
+" Intergrate system clipboard (needs xclip or similar)
 set clipboard+=unnamedplus
 
 " No annoying sound on errors
@@ -48,6 +50,8 @@ set encoding=utf8
 set incsearch       " Show search results while searching
 set hlsearch        " Highlight search results
 
+highlight Search ctermfg=0
+
 set wildignore=*.o,*~,*.pyc 
 if has("win16") || has("win32")
             set wildignore+=.git\*,.hg\*,.svn\*
@@ -80,14 +84,14 @@ call plug#end()
 
 try
         " colorscheme carbonized-dark (alternative colorscheme)
-        colorscheme dogrun
+        " colorscheme dogrun
 catch
 endtry
 
 " PLUGIN CONFIGUATION
 
 " Start NERDTree. If a file is specified, move the cursor to its window.
-autocmd StdinReadPre * let s:std_in=1
+"autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
 " NERDTree Configuration
@@ -99,8 +103,10 @@ let NERDTreeIgnore = ['^node_modules$']
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let NERDTreeGitStatusNodeColorization = 1
 
+" \  'colorscheme': 'dogrun',
+
 let g:lightline = {
-        \  'colorscheme': 'dogrun',
+        \ 'colorscheme': 'default',
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ],
         \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -111,15 +117,6 @@ let g:lightline = {
         \ }
 
 set guifont=SourceCodePro\ Font:h18
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-       " Recently vim can merge signcolumn and number column into one
-       set signcolumn=number
-else
-       set signcolumn=yes
-endif
 
 function! s:check_back_space() abort
         let col = col('.') - 1
@@ -132,3 +129,15 @@ if has('nvim')
 else
         inoremap <silent><expr> <c-@> coc#refresh()
 endif
+
+" Neovide specific settings
+if exists('g:neovide')
+  colorscheme dogrun
+  let g:lightline = {'colorscheme': 'dogrun'}
+  " Tab support
+  set showtabline=2
+  map <F9> :tabprevious<cr>
+  map <F10> :tabnext<cr>
+  map ,t :tabnew<cr>
+endif
+

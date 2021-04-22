@@ -139,12 +139,20 @@ for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod], str(i), lazy.group[name].toscreen()))        # Switch to another group
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name), lazy.group[name].toscreen())) # Send current window to another group, and switch to that group :)
 
+colors = [["#1b1c1d", "#1b1c1d"], # background color
+          ["#f74319", "#f74319"], # background for selected workspace
+          ["#ffffff", "#ffffff"], # foreground color
+          ["#74ec4c", "#74ec4c"], # green
+          ["#2c70b7", "#2c70b7"], # blue
+          ["#fdc325", "#fdc325"], # yellow
+          ["#adadad", "#adadad"], # window name color
+          ["#565747", "#565747"]] # foreground color for inactive workspace
 
 layouts = [
     layout.Columns(
         border_width = 2,
-        border_focus = "bf616a",
-        border_normal = "d8dee8",
+        border_focus = colors[1][0],
+        border_normal = colors[2][0],
         margin = 9
     ),
     layout.Max(),
@@ -163,15 +171,6 @@ layouts = [
 ]
 
 # Panel / bar at the top of the screen
-
-colors = [["#1b1c1d", "#1b1c1d"], # background color
-          ["#f74319", "#f74319"], # background for selected workspace
-          ["#ffffff", "#ffffff"], # foreground color
-          ["#74ec4c", "#74ec4c"], # green
-          ["#2c70b7", "#2c70b7"], # blue
-          ["#fdc325", "#fdc325"], # yellow
-          ["#adadad", "#adadad"], # window name color
-          ["#565747", "#565747"]] # foreground color for inactive workspace
 
 widget_defaults = dict(
     font='Ubuntu Bold',

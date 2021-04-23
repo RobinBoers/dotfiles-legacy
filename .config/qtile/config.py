@@ -110,6 +110,18 @@ keys = [
         lazy.spawn("pactl set-source-mute @DEFAULT_SOURCE@ toggle"),
         desc="Mute mic"
     ),
+    
+    # Birghtness controls
+    Key(
+        [], "XF86MonBrightnessUp",
+        lazy.spawn("xbacklight +5"),
+        desc="Brightness up"
+    ),
+    Key(
+        [], "XF86MonBrightnessDown",
+        lazy.spawn("xbacklight -10"),
+        desc="Brightness down"
+    ),
 
     # Media controls
     Key([], "XF86AudioPlay", lazy.spawn("/usr/bin/playerctl play-pause")),
@@ -217,6 +229,22 @@ screens = [
                        background = colors[0],
                        padding = 0
                 ),
+                widget.TextBox(
+                    foreground = colors[2],
+                    background = colors[0],
+                    text="BRIGHTNESS ",
+                ),
+                widget.Backlight(
+                       foreground = colors[2],
+                       background = colors[0],
+                       backlight_name = "intel_backlight",
+                ),
+                widget.Sep(
+                    linewidth = 0,
+                    padding = 10,
+                    foreground = colors[2],
+                    background = colors[0]
+                ), 
                 widget.Volume(
                     fmt=" {}", 
                     emoji=True,

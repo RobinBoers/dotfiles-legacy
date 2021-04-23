@@ -48,59 +48,67 @@ keys = [
     Key([mod, "control"], "Down", lazy.layout.grow_down(),
         desc="Grow window down"),
     Key([mod, "control"], "Up", lazy.layout.grow_up(), desc="Grow window up"),
-    Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    Key([mod], "n", lazy.layout.normalize(), desc="Reset window sizes"),
 
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
-        desc="Toggle between split and unsplit sides of stack"),
+        desc="Split"),
 
     # Switch between workspaces / groups
-    Key(["control", "mod1"], "Left", lazy.screen.prevgroup()),
-    Key(["control", "mod1"], "Right", lazy.screen.nextgroup()),
+    Key(["control", "mod1"], "Left", lazy.screen.prevgroup(), desc="Previous workspace"),
+    Key(["control", "mod1"], "Right", lazy.screen.nextgroup(), desc="Next workspace"),
 
-    Key(["mod1"], "Tab", lazy.function(latest_group)),
+    Key(["mod1"], "Tab", lazy.function(latest_group), desc="Switch between 2 workspaces"),
     
     # Open terminal with Super+Return and CTRL+ALT+T
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key(["control", "mod1"], "t", lazy.spawn(terminal), desc="Launch terminal"),
+    Key(["control", "mod1"], "t", lazy.spawn(terminal), desc="Launch terminal (alt)"),
 
     # Open webbrowser with Super+W
     Key([mod], "w", lazy.spawn(browser), desc="Launch webbrowser"),
 
     # Lock the screen with Super+L
-    Key([mod], "l", lazy.spawn("betterlockscreen --lock dim"), desc="Launch webbrowser"),
+    Key([mod], "l", lazy.spawn("betterlockscreen --lock dim"), desc="Lock screen"),
 
     # Kill windows
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
 
+    # Toggle floating layout for specific window
+    Key([mod], "f", lazy.window.toggle_floating(), desc="Toggle floating"),
+
+
     # Dmenu & Rofi
     Key(["mod4"], "r", lazy.spawn("rofi -show drun -theme qmenu"), desc="Launch Rofi"),
-    Key(["mod1"], "F1", lazy.spawn("rofi -show drun -theme qmenu"), desc="Also launch rofi, but for the windows key using xcape :)"),
+    Key(["mod1"], "F1", lazy.spawn("rofi -show drun -theme qmenu"), desc="Launch Rofi (alt)"),
 
     # Restart & Quit qtile
     Key(["control", "mod1"], "r", lazy.restart(), desc="Restart Qtile"),
-    Key(["control", "mod1"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key(["control", "mod1"], "q", lazy.shutdown(), desc="Exit Qtile"),
 
     # Volume control
 
     Key(
         [], "XF86AudioRaiseVolume",
-        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +2%")
+        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +2%"),
+        desc="Raise volume"
     ),
     Key(
         [], "XF86AudioLowerVolume",
-        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -2%")
+        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -2%"),
+        desc="Lower volume"
     ),
     Key(
         [], "XF86AudioMute",
-        lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")
+        lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"),
+        desc="Mute"
     ),
     Key(
         [], "XF86AudioMicMute",
-        lazy.spawn("pactl set-source-mute @DEFAULT_SOURCE@ toggle")
+        lazy.spawn("pactl set-source-mute @DEFAULT_SOURCE@ toggle"),
+        desc="Mute mic"
     ),
 
     # Media controls
@@ -111,7 +119,7 @@ keys = [
 
 
     #Key([mod], "r", lazy.spawncmd(),
-    #    desc="Spawn a command using a prompt widget"),
+    #    desc="Prompt"),
 ]
 
 # Workspace names and layouts

@@ -1,0 +1,43 @@
+[CompactMode]
+FontWeight=50
+PreviewSize=22
+
+[DetailsMode]
+FontWeight=50
+
+[General]
+RememberOpenedTabs=false
+ShowCopyMoveMenu=false
+Version=200
+ViewPropsTimestamp=2021,4,4,15,53,42.963
+
+[IconsMode]
+FontWeight=50
+
+[MainWindow]
+HDMI1 Height 1920x1080=1006
+HDMI1 Width 1920x1080=960
+HDMI1 Window-Maximized 1920x1080=true
+HDMI1 XPosition 1920x1080=0
+HDMI1 YPosition 1920x1080=29
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC4AAAD5fwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAApAAAD5QAAAFAA////AAAAAQAAALgAAAPg/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAC4AAAPgAAAAAgD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAIA////AAAGrwAAA+UAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+eDP-1 Height 1920x1080=1005
+eDP-1 Width 1920x1080=1920
+eDP1 Height 1920x1080=1038
+eDP1 Width 1920x1080=1902
+eDP1 Window-Maximized 1920x1080=true
+eDP1 XPosition 1920x1080=9
+eDP1 YPosition 1920x1080=33
+
+[Open-with settings]
+CompletionMode=1
+History=
+
+[PreviewSettings]
+Plugins=ffmpegthumbs,windowsimagethumbnail,ebookthumbnail,jpegthumbnail,comicbookthumbnail,directorythumbnail,exrthumbnail,audiothumbnail,kraorathumbnail,mltpreview,svgthumbnail,windowsexethumbnail,opendocumentthumbnail,rawthumbnail,cursorthumbnail,fontthumbnail,blenderthumbnail,appimagethumbnail,imagethumbnail,djvuthumbnail,gsthumbnail
+
+[SettingsDialog]
+HDMI1 Height 1920x1080=440
+HDMI1 Width 1920x1080=578

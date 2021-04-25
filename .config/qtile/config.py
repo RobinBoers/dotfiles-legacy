@@ -173,7 +173,8 @@ layouts = [
         border_width = 2,
         border_focus = colors[1][0],
         border_normal = colors[2][0],
-        margin = 9
+        margin = 9,
+        border_on_single = True
     ),
     layout.Max(),
     layout.Floating(),
@@ -215,8 +216,19 @@ screens = [
                        rounded = False,
                        highlight_color = colors[1],
                        highlight_method = "line",
+                       
+                       this_current_screen_border = colors[2],
+                       this_screen_border = colors[6],
+                       other_current_screen_border = colors[2],
+                       other_screen_border = colors[6],
+
                        foreground = colors[2],
-                       background = colors[0]
+                       background = colors[0],
+                       disable_drag = True,
+
+                       urgent_alert_method = 'line',
+                       urgent_border = colors[2],
+                       urgent_text = colors[3]
                 ),
                 widget.Sep(
                     linewidth = 0,

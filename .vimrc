@@ -13,8 +13,6 @@ set mat=2
 set background=dark
 set hidden
 
-
-
 " Intergrate system clipboard (needs xclip or similar)
 set clipboard+=unnamedplus
 
@@ -103,10 +101,8 @@ let NERDTreeIgnore = ['^node_modules$']
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let NERDTreeGitStatusNodeColorization = 1
 
-" \  'colorscheme': 'dogrun',
-
 let g:lightline = {
-        \ 'colorscheme': 'default',
+        \ 'colorscheme': 'frontenddelight',
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ],
         \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -116,7 +112,7 @@ let g:lightline = {
         \ }
         \ }
 
-set guifont=SourceCodePro\ Font:h18
+set guifont=SourceCodePro\ Font:h20
 
 function! s:check_back_space() abort
         let col = col('.') - 1
@@ -132,8 +128,8 @@ endif
 
 " Neovide specific settings
 if exists('g:neovide')
-  colorscheme dogrun
-  let g:lightline = {'colorscheme': 'dogrun'}
+  colorscheme frontend-delight 
+  
   " Tab support
   set showtabline=2
   map <F9> :tabprevious<cr>

@@ -1,0 +1,8 @@
+[ElisaFileIndexer]
+RootPath[$e]=$HOME/Music
+
+[PlayerSettings]
+ShowProgressOnTaskBar=false
+
+[Views]
+InitialView=AllAlbums

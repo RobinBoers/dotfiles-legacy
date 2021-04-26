@@ -1,0 +1,19 @@
+[$Version]
+update_info=spectacle_newConfig.upd:spectacle-new-config
+
+[General]
+autoSaveImage=true
+copyImageToClipboard=true
+copySaveLocation=false
+rememberLastRectangularRegion=false
+useReleaseToCapture=true
+
+[GuiConfig]
+captureMode=5
+cropRegion=526,729,278,52
+window-position=925,253
+
+[Save]
+defaultSaveLocation=file:///home/robin/Pictures/Screenshots/
+lastSaveLocation=file:///home/robin/Pictures/Screenshots/Screenshot 04-25-21 (5).png
+saveFilenameFormat=Screenshot %M-%D-%y (%d)

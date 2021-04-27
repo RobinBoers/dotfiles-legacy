@@ -40,8 +40,8 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
-bindsym Control+Mod1+t exec konsole
+bindsym $mod+Return exec alacritty
+bindsym Control+Mod1+t exec alacritty
 
 # kill focused window
 bindsym $mod+q kill
@@ -221,6 +221,10 @@ bindsym $mod+l exec betterlockscreen --lock dim
 
 # Show wallpaper
 exec --no-startup-id nitrogen --restore
+
+# Start lxsession for polkit
+exec --no-startup-id lxsession
+exec --no-startup-id dunst
 
 assign [class="firefox"] www
 assign [class="chromium"] www

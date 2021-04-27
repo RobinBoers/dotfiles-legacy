@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Mistral</name>
+    <name>Arc-Dark</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -150,7 +150,7 @@
      Many programs reserve space automatically, but you can use this in other
      cases. -->
   <margins>
-    <top>27</top>
+    <top>0</top>
     <bottom>0</bottom>
     <left>0</left>
     <right>0</right>
@@ -194,7 +194,12 @@
     <!-- Open Konsole-->
     <keybind key="C-A-t">
       <action name="Execute">
-        <command>konsole</command>
+        <command>alacritty</command>
+      </action>
+    </keybind>
+    <keybind key="W-Return">
+      <action name="Execute">
+        <command>alacritty</command>
       </action>
     </keybind>
     <!-- Open color picker (gpick in this case)-->
@@ -203,12 +208,12 @@
         <command>gpick</command>
       </action>
     </keybind>
-    <keybind key="C-A-Delete">
+    <keybind key="C-A-r">
       <action name="Execute">
         <command>openbox --reconfigure</command>
       </action>
     </keybind>
-    <keybind key="C-A-Escape">
+    <keybind key="C-A-q">
       <action name="Execute">
         <command>openbox --exit</command>
       </action>

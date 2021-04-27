@@ -6,7 +6,7 @@
 * {
     background-color:      #1b1c1d ;
     border-color:          #1b1c1d;
-    text-color:            #ffffff;
+    text-color:            #adadad;
     font:            	"DejaVu Sans Mono 10";
 }
 
@@ -32,11 +32,13 @@ listview {
 entry {
     expand:     false;
     width:      10em;
+    padding: 0px 10px;
 }
 
 element {
     padding: 0px 1px;
 }
 element selected {
-    background-color: #f74319;
+    background-color: #e75e4f;
+    color: #ffffff; 
 }

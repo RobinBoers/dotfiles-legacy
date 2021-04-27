@@ -4,4 +4,6 @@ xcape -e 'Super_L=Alt_L|F1'
 
 nitrogen --restore &
 xcompmgr &
-tint2 &
+lxsession &
+plank &
+dunst &

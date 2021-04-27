@@ -1,5 +1,5 @@
 # Config file for Qtile TWM written by Robijntje.
-# This is part of Robintjes dotfiles. Copy it and do whatever
+# This is part of Robijntjes dotfiles. Copy it and do whatever
 # the hell you want with it.
 
 from typing import List  # noqa: F401
@@ -160,8 +160,8 @@ for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name), lazy.group[name].toscreen())) # Send current window to another group, and switch to that group :)
 
 colors = [["#1b1c1d", "#1b1c1d"], # background color
-          ["#f74319", "#f74319"], # background for selected workspace
-          ["#ffffff", "#ffffff"], # foreground color
+          ["#e75e4f", "#e75e4f"], # background for selected workspace
+          ["#adadad", "#adadad"], # foreground color
           ["#74ec4c", "#74ec4c"], # green
           ["#2c70b7", "#2c70b7"], # blue
           ["#fdc325", "#fdc325"], # yellow
@@ -211,7 +211,7 @@ screens = [
                        padding_x = 5,
                        borderwidth = 0,
                        active = colors[2],
-                       block_highlight_text_color = colors[2],
+                       block_highlight_text_color = "#ffffff",
                        inactive = colors[7],
                        rounded = False,
                        highlight_color = colors[1],
@@ -281,7 +281,7 @@ screens = [
                        no_update_string = "Up to date",
                        colour_no_updates = colors[2],
                        foreground = colors[2],
-                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')},
+                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e sudo pacman -Syu')},
                        background = colors[0]
                 ),
                 widget.Sep(
@@ -347,7 +347,7 @@ dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 main = None  # WARNING: this is deprecated and will be removed soon
 follow_mouse_focus = True
-bring_front_click = False
+bring_front_click = True
 cursor_warp = False
 
 floating_layout = layout.Floating(float_rules=[

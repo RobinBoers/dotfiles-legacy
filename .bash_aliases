@@ -30,6 +30,8 @@ alias vim='nvim'
 
 alias :q="exit"
 
+alias cat="bat"
+
 alias neo='neofetch'
 alias shotcut='flatpak run org.shotcut.Shotcut'
 alias xampp='sudo /opt/lampp/manager-linux-x64.run'

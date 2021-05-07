@@ -3,17 +3,17 @@
 	<menu id="root-menu" label="Openbox 3">
 		<item icon="/usr/share/icons/Humanity/apps/48/terminal.svg" label="Terminal">
 			<action name="Execute">
-				<execute>x-terminal-emulator</execute>
+				<execute>alacritty</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Humanity/apps/48/system-file-manager.svg" label="File explorer">
 			<action name="Execute">
-				<execute>pcmanfm</execute>
+				<execute>nemo</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Humanity/apps/48/browser.svg" label="Web browser">
 			<action name="Execute">
-				<execute>x-www-browser</execute>
+				<execute>firefox</execute>
 			</action>
 		</item>
 		<!-- This requires the presence of the 'openbox-menu' package to work -->

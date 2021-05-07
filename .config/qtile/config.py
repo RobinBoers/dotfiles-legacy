@@ -13,8 +13,9 @@ import os
 import subprocess
 
 mod = "mod4"            # Make Super the mod key
-terminal = "alacritty"    # Set default terminal emulator
+terminal = "alacritty"  # Set default terminal emulator
 browser = "firefox"     # Set default webbrowser
+home = "/home/robin/"   # Path to home directory
 
 def latest_group(qtile):
     qtile.current_screen.set_group(qtile.current_screen.previous_group)
@@ -81,7 +82,7 @@ keys = [
 
 
     # Dmenu & Rofi
-    Key(["mod4"], "r", lazy.spawn("rofi -show drun -theme qmenu"), desc="Launch Rofi"),
+    Key(["mod4"], "r", lazy.spawn("rofi -show run -theme qmenu"), desc="Launch Rofi"),
     Key(["mod1"], "F1", lazy.spawn("rofi -show drun -theme qmenu"), desc="Launch Rofi (alt)"),
 
     # Restart & Quit qtile
@@ -139,10 +140,10 @@ def init_group_names():
     return [("dev", {'layout': 'columns'}),
             ("www", {'layout': 'columns'}),
             ("chat", {'layout': 'columns'}),
-            ("docs", {'layout': 'columns'}),
-            ("term", {'layout': 'columns'}),
+            ("files", {'layout': 'columns'}),
+            ("media", {'layout': 'columns'}),
             ("games", {'layout': 'max'}),
-            ("sys", {'layout': 'columns'}),
+            ("term", {'layout': 'columns'}),
             ("edit", {'layout': 'floating'}),
             ("more", {'layout': 'columns'})]
 
@@ -173,11 +174,15 @@ layouts = [
         border_width = 2,
         border_focus = colors[1][0],
         border_normal = colors[2][0],
-        margin = 9,
+        margin = 8,
         border_on_single = True
     ),
     layout.Max(),
-    layout.Floating(),
+    layout.Floating(
+        border_width = 2,
+        border_focus = colors[1][0],
+        border_normal = colors[2][0]
+    ),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
@@ -194,9 +199,9 @@ layouts = [
 # Panel / bar at the top of the screen
 
 widget_defaults = dict(
-    font='Ubuntu Bold',
-    fontsize=10,
-    padding=3,
+    font='DejaVu Sans Mono',
+    fontsize=13,
+    padding=0,
 )
 extension_defaults = widget_defaults.copy()
 
@@ -205,10 +210,11 @@ screens = [
         top=bar.Bar(
             [widget.GroupBox(
                        fontsize = 9,
+                       font = "Ubuntu Bold",
                        margin_y = 3,
                        margin_x = 0,
                        padding_y = 5,
-                       padding_x = 5,
+                       padding_x = 7,
                        borderwidth = 0,
                        active = colors[2],
                        block_highlight_text_color = "#ffffff",
@@ -232,7 +238,7 @@ screens = [
                 ),
                 widget.Sep(
                     linewidth = 0,
-                    padding = 5,
+                    padding = 7,
                     foreground = colors[1],
                     background = colors[0]
                 ),
@@ -253,7 +259,7 @@ screens = [
                 ),
                 widget.Sep(
                     linewidth = 0,
-                    padding = 10,
+                    padding = 15,
                     foreground = colors[2],
                     background = colors[0]
                 ), 
@@ -270,7 +276,7 @@ screens = [
                 ),
                 widget.Sep(
                     linewidth = 0,
-                    padding = 10,
+                    padding = 15,
                     foreground = colors[2],
                     background = colors[0]
                 ),
@@ -280,16 +286,22 @@ screens = [
                        display_format = "{updates} Updates",
                        no_update_string = "Up to date",
                        colour_no_updates = colors[2],
+                       colour_have_updates = colors[1],
                        foreground = colors[2],
-                       mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(terminal + ' -e sudo pacman -Syu')},
+                       execute = terminal + ' -e sudo pacman -Syu',
                        background = colors[0]
                 ),
                 widget.Sep(
                     linewidth = 0,
-                    padding = 10,
+                    padding = 15,
                     foreground = colors[2],
                     background = colors[0]
                 ),
+                #widget.BatteryIcon(
+                #    background = colors[0],
+                #    update_interval = 25,
+                #    #theme_path= home+".config/qtile/icons/battery/",
+                #),
                 widget.Battery(
                     foreground = colors[2],
                     background = colors[0],
@@ -300,33 +312,47 @@ screens = [
                     unknown_char = "UNK",
                     format = '{char} {percent:2.0%}',
                     show_short_text = False,
+                    low_foreground = colors[1],
+                    notify_below = 15,
+                    update_interval = 25
                 ),
                 widget.Sep(
                     linewidth = 0,
-                    padding = 10,
-                    foreground = colors[2],
-                    background = colors[0]
-                ),
-                widget.Wlan(
-                    interface = "wlp2s0",
-                    format = '{essid}',
+                    padding = 15,
                     foreground = colors[2],
                     background = colors[0],
                 ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 10,
-                    foreground = colors[2],
-                    background = colors[0]
-                ),
+                #widget.Wlan(
+                #    interface = "wlp2s0",
+                #    format = '{essid}',
+                #    foreground = colors[2],
+                #    background = colors[0],
+                #),
+                #widget.Sep(
+                #    linewidth = 0,
+                #    padding = 10,
+                #    foreground = colors[2],
+                #    background = colors[0]
+                #),
                 widget.Clock(
                     format = '%Y-%m-%d %H:%M',
                     background = colors[0],
                     foreground = colors[2]
                 ),
+                 widget.Sep(
+                    linewidth = 0,
+                    padding = 10,
+                    foreground = colors[2],
+                    background = colors[0],
+                ),
                 widget.Systray(
                     background = colors[0],
                     padding = 5
+                ),widget.Sep(
+                    linewidth = 0,
+                    padding = 10,
+                    foreground = colors[2],
+                    background = colors[0],
                 ),
             ],
             24,
@@ -359,6 +385,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='ssh-askpass'),  # ssh-askpass
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
+    Match(title='dock1'),
 ])
 
 auto_fullscreen = True

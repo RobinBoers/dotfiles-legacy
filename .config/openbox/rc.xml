@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Arc-Dark</name>
+    <name>KvAdapta</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -120,10 +120,13 @@
 
        use obconf if you want to change these without having to log out
        and back in -->
-    <number>1</number>
+    <number>4</number>
     <firstdesk>1</firstdesk>
     <names>
       <name>Primary</name>
+      <name>Chat</name>
+      <name>Editing</name>
+      <name>Gaming</name>
     </names>
     <popupTime>875</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
@@ -185,13 +188,23 @@
     <keybind key="W-q">
       <action name="Close"/>
     </keybind>
+    <!-- Open firefox -->
+    <keybind key="W-w">
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
+    </keybind>
     <!-- Bring up rofi / dmenu-->
     <keybind key="A-F1">
       <action name="Execute">
-        <command>rofi -show drun -theme dmenu</command>
+        <command>rofi -show drun -theme qmenu</command>
+      </action>
+    </keybind><keybind key="W-r">
+      <action name="Execute">
+        <command>rofi -show run -theme qmenu</command>
       </action>
     </keybind>
-    <!-- Open Konsole-->
+    <!-- Open Terminal-->
     <keybind key="C-A-t">
       <action name="Execute">
         <command>alacritty</command>
@@ -221,17 +234,32 @@
     <!-- Media controls -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <execute>/home/robin/Scripts/volume.sh increase</execute>
+        <execute>pactl set-sink-volume @DEFAULT_SINK@ +2%</execute>
       </action>
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <execute>/home/robin/Scripts/volume.sh decrease</execute>
+        <execute>pactl set-sink-volume @DEFAULT_SINK@ -2%</execute>
       </action>
     </keybind>
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <execute>/home/robin/Scripts/volume.sh toggle</execute>
+        <execute>pactl set-sink-mute @DEFAULT_SINK@ toggle</execute>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMicMute">
+      <action name="Execute">
+        <execute>pactl set-source-mute @DEFAULT_SOURCE@ toggle</execute>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute">
+        <execute>xbacklight +5</execute>
+      </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute">
+        <execute>xbacklight -5</execute>
       </action>
     </keybind>
     <!-- Window snapping -->
@@ -401,37 +429,6 @@
           <action name="Raise"/>
           <action name="Unshade"/>
         </finalactions>
-      </action>
-    </keybind>
-    <!-- Keybindings for window switching with the arrow keys -->
-    <keybind key="W-S-Right">
-      <action name="DirectionalCycleWindows">
-        <direction>right</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Left">
-      <action name="DirectionalCycleWindows">
-        <direction>left</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Up">
-      <action name="DirectionalCycleWindows">
-        <direction>up</direction>
-      </action>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="DirectionalCycleWindows">
-        <direction>down</direction>
-      </action>
-    </keybind>
-    <!-- Keybindings for running applications -->
-    <keybind key="W-e">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Konqueror</name>
-        </startupnotify>
-        <command>kfmclient openProfile filemanagement</command>
       </action>
     </keybind>
   </keyboard>

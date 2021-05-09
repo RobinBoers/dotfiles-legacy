@@ -161,9 +161,9 @@ for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name), lazy.group[name].toscreen())) # Send current window to another group, and switch to that group :)
 
 colors = [["#1b1c1d", "#1b1c1d"], # background color
-          ["#e75e4f", "#e75e4f"], # background for selected workspace
+          ["#f8511b", "#f8511b"], # background for selected workspace
           ["#adadad", "#adadad"], # foreground color
-          ["#74ec4c", "#74ec4c"], # green
+          ["#e75e4f", "#e75e4f"], # red
           ["#2c70b7", "#2c70b7"], # blue
           ["#fdc325", "#fdc325"], # yellow
           ["#adadad", "#adadad"], # window name color
@@ -208,7 +208,19 @@ extension_defaults = widget_defaults.copy()
 screens = [
     Screen(
         top=bar.Bar(
-            [widget.GroupBox(
+            [widget.TextBox(
+                    foreground = "#ffffff",
+                    background = colors[4],
+                    text="",
+                    font="Ubuntu Bold",
+                    fontsize = 9,
+                    margin_y = 3,
+                    margin_x = 7,
+                    padding_y = 5,
+                    padding_x = 7,
+                    mouse_callbacks = {}
+                ),
+                widget.GroupBox(
                        fontsize = 9,
                        font = "Ubuntu Bold",
                        margin_y = 3,
@@ -286,7 +298,7 @@ screens = [
                        display_format = "{updates} Updates",
                        no_update_string = "Up to date",
                        colour_no_updates = colors[2],
-                       colour_have_updates = colors[1],
+                       colour_have_updates = colors[3],
                        foreground = colors[2],
                        execute = terminal + ' -e sudo pacman -Syu',
                        background = colors[0]
@@ -312,7 +324,7 @@ screens = [
                     unknown_char = "UNK",
                     format = '{char} {percent:2.0%}',
                     show_short_text = False,
-                    low_foreground = colors[1],
+                    low_foreground = colors[3],
                     notify_below = 15,
                     update_interval = 25
                 ),
@@ -386,7 +398,10 @@ floating_layout = layout.Floating(float_rules=[
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
     Match(title='dock1'),
-])
+],no_reposition_rules=None,border_width = 2,
+        border_focus = colors[1][0],
+        border_normal = colors[2][0]
+)
 
 auto_fullscreen = True
 focus_on_window_activation = "smart"

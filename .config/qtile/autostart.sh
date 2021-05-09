@@ -6,7 +6,7 @@ xcape -e 'Super_L=Alt_L|F1'
 
 export QT_QPA_PLATFORMTHEME=qt5ct
 
-#picom --experimental-backends &
+picom --experimental-backends &
 lxsession &
 
 # Mouse stuff (using Arch now btw.)

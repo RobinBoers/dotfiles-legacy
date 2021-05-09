@@ -24,7 +24,7 @@ border_width = 0
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #e75e4f 100
+background_color = #f8511b 100
 border_color = #242526 0
 background_color_hover = #242526 70
 border_color_hover = #242526 0
@@ -37,12 +37,12 @@ border_width = 0
 border_sides = TBLR
 border_content_tint_weight = 0
 background_content_tint_weight = 0
-background_color = #f8511b 60
-border_color = #f8511b 0
-background_color_hover = #f8511b 60
-border_color_hover = #f8511b 0
-background_color_pressed = #f8511b 60
-border_color_pressed = #f8511b 0
+background_color = #fdc325 60
+border_color = #fdc325 0
+background_color_hover = #fdc325 60
+border_color_hover = #fdc325 0
+background_color_pressed = #fdc325 60
+border_color_pressed = #fdc325 0
 
 # Background 4: Default task
 rounded = 0

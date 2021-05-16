@@ -91,6 +91,10 @@ bindsym $mod+e layout toggle split
 # Alt+Tab to cycle trough workspaces
 bindsym Mod1+Tab workspace next
 
+# Screenshot & colorpicker
+bindsym $mod+Shift+s exec --no-startup-id "scrot -s -f -e 'mv $f ~/Pictures/Screenshots/'"
+bindsym $mod+Shift+q exec --no-startup-id "gpick"
+
 # New workspace
 # bindsym $mod+t workspace
 
@@ -147,7 +151,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym Control+Mod1+Delete reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym Control+Mod1+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym Control+Mod1+q exec "i3-msg exit"

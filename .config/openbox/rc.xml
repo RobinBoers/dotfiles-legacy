@@ -194,6 +194,12 @@
         <command>firefox</command>
       </action>
     </keybind>
+    <!-- Open menu-->
+    <keybind key="W-m">
+      <action name="Execute">
+        <command>sgtk-menu</command>
+      </action>
+    </keybind>
     <!-- Bring up rofi / dmenu-->
     <keybind key="A-F1">
       <action name="Execute">
@@ -219,6 +225,11 @@
     <keybind key="W-S-q">
       <action name="Execute">
         <command>gpick</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-s">
+      <action name="Execute">
+        <command>scrot -s -f -e 'mv $f ~/Pictures/Screenshots/'</command>
       </action>
     </keybind>
     <keybind key="C-A-r">
@@ -887,6 +898,10 @@
   # end of the example
 -->
     <application title="Mozilla Thunderbird">
+      <maximized>true</maximized>
+      <decor>no</decor>
+    </application>
+    <application title="Mozilla Firefox">
       <maximized>true</maximized>
       <decor>no</decor>
     </application>

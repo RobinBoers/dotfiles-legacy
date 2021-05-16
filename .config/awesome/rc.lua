@@ -240,6 +240,11 @@ root.buttons(gears.table.join(
 globalkeys = gears.table.join(
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
+    awful.key({ "Mod4", "Shift"           }, "s",      function() awful.spawn("scrot -s -f -e 'mv $f ~/Pictures/Screenshots/'") end,
+              {description="go to prev tag", group="awesome"}),
+    awful.key({ "Mod4", "Shift"           }, "q",      function() awful.spawn("gpick") end,
+              {description="go to next tag", group="awesome"}),
+
 
     -- Next / prev tag
     awful.key({ "Control", "Mod1"           }, "Left",      awful.tag.viewprev,

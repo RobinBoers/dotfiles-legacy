@@ -89,6 +89,9 @@ keys = [
     Key(["control", "mod1"], "r", lazy.restart(), desc="Restart Qtile"),
     Key(["control", "mod1"], "q", lazy.shutdown(), desc="Exit Qtile"),
 
+    Key([mod, "shift"], "s", lazy.spawn("scrot -s -f -e 'mv $f ~/Pictures/Screenshots/'"), desc="Take screenshot"),
+    Key([mod, "shift"], "s", lazy.spawn("gpick"), desc="Open colorpicker"),
+
     # Volume control
 
     Key(
@@ -135,17 +138,64 @@ keys = [
     #    desc="Prompt"),
 ]
 
+icons = {
+    "logo": "",     # fa-linux
+    "temp": "",     # fa-fire-extinguisher
+    "battery": "",  # fa-battery-three-quarters
+    "light": "",    # fa-lightbulb-o
+    "volume": "",   # fa-bullhorn
+    "rss": "",      # fa-rss
+    "tasks": "",    # fa-calendar-check-o
+    "repeat": "",   # fa-repeat
+    "email": "",    # fa-at
+    "gmail": "",      # fa-google
+
+    "chat": "",      # fa-comment-dots
+    "web": "",      # fa-internet-explorer
+    "terminal": "", # fa-keyboard
+    "dev": "",      # fa-heart
+    "doc": "",      # fa-folder
+    "misc": "",     # fa-file
+    "ssh": "",      # fa-hashtag
+    "virtual": "", # fa-cogs
+    "games": "",     # fa-playstation
+    "music": "",    # fa-headphones
+
+    "max": "",       # fa-window-maximize
+    "monadtall": "", # fa-columns
+    "treetab": "",   # fa-tree
+
+    "systray": "",  # fa-fedora
+}
+
+def get_layout_icon(name):
+    return {
+        "max": icons["max"],
+        "monadtall": icons["monadtall"],
+        "treetab": icons["treetab"],
+    }.get(name, name)
+
 # Workspace names and layouts
 def init_group_names():    
+    #return [(icons["dev"], {'layout': 'columns'}),
+    #        (icons["web"], {'layout': 'columns'}),
+    #        (icons["chat"], {'layout': 'columns'}),
+    #        (icons["doc"], {'layout': 'columns'}),
+    #        (icons["music"], {'layout': 'columns'}),
+    #        (icons["games"], {'layout': 'max'}),
+    #        (icons["terminal"], {'layout': 'columns'}),
+    #        (icons["misc"], {'layout': 'floating'}),
+    #        ("more", {'layout': 'columns'})]
     return [("dev", {'layout': 'columns'}),
             ("www", {'layout': 'columns'}),
             ("chat", {'layout': 'columns'}),
-            ("files", {'layout': 'columns'}),
-            ("media", {'layout': 'columns'}),
+            ("doc", {'layout': 'columns'}),
+            ("music", {'layout': 'columns'}),
             ("games", {'layout': 'max'}),
             ("term", {'layout': 'columns'}),
             ("edit", {'layout': 'floating'}),
             ("more", {'layout': 'columns'})]
+
 
 def init_groups():
     return [Group(name, **kwargs) for name, kwargs in group_names]
@@ -207,18 +257,24 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        top=bar.Bar(
-            [widget.TextBox(
-                    foreground = "#ffffff",
-                    background = colors[4],
-                    text="",
-                    font="Ubuntu Bold",
-                    fontsize = 9,
-                    margin_y = 3,
-                    margin_x = 7,
-                    padding_y = 5,
-                    padding_x = 7,
-                    mouse_callbacks = {}
+        top=bar.Bar([
+                widget.Sep(
+                    linewidth = 0,
+                    padding = 0, #7
+                    foreground = colors[1],
+                    background = colors[0]
+                ),
+                widget.TextBox(
+                    text=icons["logo"],
+                    fontsize=0, #18
+                    foreground=colors[2],
+                    background=colors[0],
+                ),
+                widget.Sep(
+                    linewidth = 0,
+                    padding = 0, #7
+                    foreground = colors[1],
+                    background = colors[0]
                 ),
                 widget.GroupBox(
                        fontsize = 9,
@@ -385,7 +441,7 @@ dgroups_key_binder = None
 dgroups_app_rules = []  # type: List
 main = None  # WARNING: this is deprecated and will be removed soon
 follow_mouse_focus = True
-bring_front_click = True
+bring_front_click = False
 cursor_warp = False
 
 floating_layout = layout.Floating(float_rules=[

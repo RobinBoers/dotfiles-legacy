@@ -56,12 +56,12 @@
 		<separator/>
 		<item icon="/usr/share/icons/Humanity/apps/48/system-shutdown.svg" label="Shutdown">
 			<action name="Execute">
-				<execute>~/Scripts/shutdown.sh</execute>
+				<execute>shutdown now</execute>
 			</action>
 		</item>
 		<item icon="/usr/share/icons/Humanity/apps/48/system-restart.svg" label="Reboot">
 			<action name="Execute">
-				<execute>~/Scripts/reboot.sh</execute>
+				<execute>reboot</execute>
 			</action>
 		</item>
 	</menu>

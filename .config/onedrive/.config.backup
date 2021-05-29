@@ -1,0 +1,9 @@
+# OneDrive config to backup and sync my home directory with the cloud
+# Dotfiles are skipped and backed-up in my dotfiles github repo. The Afbeeldingen folder contains my photos and is
+# to large to sync. Other stuff like virtualboxes and arduino files arent synced either
+#
+sync_dir="/home/robin"
+skip_file = "~*|.~*|*.tmp"
+skip_dir = "Desktop|Documents/Github|VirtualBox VMs|Downloads|Arduino|iPhone|Afbeeldingen|.mozilla|.local|.chromium|.config"
+skip_dotfiles = "true"
+

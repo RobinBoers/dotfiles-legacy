@@ -90,7 +90,7 @@ keys = [
     Key(["control", "mod1"], "q", lazy.shutdown(), desc="Exit Qtile"),
 
     Key([mod, "shift"], "s", lazy.spawn("scrot -s -f -e 'mv $f ~/Pictures/Screenshots/'"), desc="Take screenshot"),
-    Key([mod, "shift"], "s", lazy.spawn("gpick"), desc="Open colorpicker"),
+    Key([mod, "shift"], "q", lazy.spawn("gpick"), desc="Open colorpicker"),
 
     # Volume control
 

@@ -203,7 +203,7 @@
     <!-- Bring up rofi / dmenu-->
     <keybind key="A-F1">
       <action name="Execute">
-        <command>rofi -show drun -theme dmenu</command>
+        <command>rofi -show drun -theme ob</command>
       </action>
     </keybind>
     <keybind key="A-F4">
@@ -213,7 +213,7 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>rofi -show run -theme dmenu</command>
+        <command>rofi -show run -theme ob</command>
       </action>
     </keybind>
     <!-- Open Terminal-->

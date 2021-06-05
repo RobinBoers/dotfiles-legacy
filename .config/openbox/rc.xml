@@ -42,7 +42,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>KvAdapta-custom</name>
+    <name>Yaru</name>
     <titleLayout>NLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -208,7 +208,7 @@
     </keybind>
     <keybind key="A-F4">
       <action name="Execute">
-        <command>nwgbar</command>
+              <command>rofi-power</command> <!-- nwgbar -->
       </action>
     </keybind>
     <keybind key="W-r">
@@ -245,6 +245,22 @@
         <command>scrot -s -f -e 'mv $f ~/Pictures/Screenshots/'</command>
       </action>
     </keybind>
+    <keybind key="W-S-w">
+      <action name="Execute">
+        <command>rofi-web</command>
+      </action>
+    </keybind>
+     <keybind key="W-S-p">
+      <action name="Execute">
+        <command>rofi-packages</command>
+      </action>
+    </keybind><keybind key="W-S-e">
+      <action name="Execute">
+        <command>rofimoji --action copy --rofi-args "-theme ob"</command>
+      </action>
+    </keybind>
+
+
     <keybind key="C-A-r">
       <action name="Execute">
         <command>openbox --reconfigure</command>

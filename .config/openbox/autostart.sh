@@ -18,5 +18,6 @@ polybar top &
 
 xinput set-prop "Synaptics TM3336-001" "libinput Natural Scrolling Enabled" 1
 xinput set-prop "Synaptics TM3336-001" "libinput Tapping Enabled" 1
+xinput set-prop "Synaptics TM3336-001" "libinput Accel Speed" .2
 
 xset b off

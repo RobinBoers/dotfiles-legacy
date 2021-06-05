@@ -3,23 +3,19 @@
  * User: Qball
  * Copyright: Dave Davenport
  */
-configuration {
-         show-icons: true;
-         icon-theme: "Mint-Y-Aqua";
-}
-
 * {
     text-color:         #adadad;
-    font:            	"DejaVu Sans Mono 11";
+    font:            	"DejaVu Sans Mono 10";
     background-color:         #FFFFFF00;
     border-color:       #FFFFFF00;
 }
 
 window {
-    anchor:     north west;
-    location:   north west;
-    width:      35%;
-    height:     40%;
+    anchor:     north east;
+    location:   north east;
+    y-offset: 21px;
+    width:      10%;
+    height:     14%;
     padding:    2px;
     children:   [ horibox ];
     background-color:      #1d1c25c8;
@@ -28,7 +24,7 @@ window {
 }
 
 horibox {
-    orientation: horizontal;
+    orientation: vertical;
     children:   [ prompt, entry, listview ];
 }
 
@@ -38,10 +34,9 @@ listview {
     lines:      100;
 }
 
-entry {
-    expand:     false;
-    width:      10em;
-    padding: 0px 9px;
+entry, prompt {
+	visible:                        false;
+    enabled: 						false;
 }
 
 element {
@@ -50,5 +45,3 @@ element {
 element selected {
     color: #ffffff; 
 }
-
-element-icon { size:2ch ; }

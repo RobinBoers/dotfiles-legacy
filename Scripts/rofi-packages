@@ -1,0 +1,8 @@
+#!/bin/bash
+query=$( yay -Slq | rofi -theme ob -dmenu -matching fuzzy -location 0 -p "Package > " )
+
+if [[ -n "$query" ]]; then
+       alacritty -e yay -S $query
+else
+       exit
+fi

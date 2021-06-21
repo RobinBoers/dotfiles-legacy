@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LibreOffice Writer
+Comment=Create and edit text and graphics in letters, reports, documents and Web pages by using Writer.
+Exec=libreoffice --writer %U
+Icon=libreoffice-writer
+Path=
+Terminal=false
+StartupNotify=true

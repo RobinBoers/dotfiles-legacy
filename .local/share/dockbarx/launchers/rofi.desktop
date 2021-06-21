@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Unity Dash
+Exec=rofi -combi-modi drun,window -modi run,combi -show combi -theme ob-new
+Icon=/home/robin/Pictures/ubuntu.png
+Type=Application
+Comment=
+Path=
+Terminal=false
+StartupNotify=false

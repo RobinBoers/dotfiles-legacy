@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Nemo
+Comment=Access and organize files
+Exec=nemo %U
+Icon=system-file-manager
+Path=
+Terminal=false
+StartupNotify=false

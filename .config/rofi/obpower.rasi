@@ -13,13 +13,13 @@
 window {
     anchor:     north east;
     location:   north east;
-    y-offset: 21px;
-    width:      10%;
+    y-offset: 25px;
+    width:      8%;
     height:     14%;
     padding:    2px;
     children:   [ horibox ];
-    background-color:      #1d1c25c8;
-    border-color:          #1d1c25c8;
+    background-color:      #11111180;
+    border-color:          #11111180;
 
 }
 
@@ -43,5 +43,5 @@ element {
     padding: 0px 1px;
 }
 element selected {
-    color: #ffffff; 
+    color: #ffffff;
 }

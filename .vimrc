@@ -12,6 +12,7 @@ set showmatch       " Show brackets when text indicator is over them
 set mat=2
 set background=dark
 set hidden
+set encoding=UTF-8
 
 " Intergrate system clipboard (needs xclip or similar)
 set clipboard+=unnamedplus
@@ -75,6 +76,7 @@ Plug 'preservim/nerdtree'
 Plug 'itchyny/vim-gitbranch'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -102,7 +104,7 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 let NERDTreeGitStatusNodeColorization = 1
 
 let g:lightline = {
-        \ 'colorscheme': 'frontenddelight',
+        \ 'colorscheme': 'dogrun',
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ],
         \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -112,7 +114,7 @@ let g:lightline = {
         \ }
         \ }
 
-set guifont=SourceCodePro\ Font:h20
+set guifont=SauceCodePro\ Nerd\ Font\ Regular:h20
 
 function! s:check_back_space() abort
         let col = col('.') - 1
@@ -128,12 +130,41 @@ endif
 
 " Neovide specific settings
 if exists('g:neovide')
-  colorscheme frontend-delight 
+  colorscheme dogrun 
   
   " Tab support
   set showtabline=2
   map <F9> :tabprevious<cr>
   map <F10> :tabnext<cr>
   map ,t :tabnew<cr>
+  map ,w :tabclose<cr>
 endif
 
+
+"let s:startify_ascii_header = [
+" \ '                                        ▟▙            ',
+" \ '                                        ▝▘            ',
+" \ '██▃▅▇█▆▖  ▗▟████▙▖   ▄████▄   ██▄  ▄██  ██  ▗▟█▆▄▄▆█▙▖',
+" \ '██▛▔ ▝██  ██▄▄▄▄██  ██▛▔▔▜██  ▝██  ██▘  ██  ██▛▜██▛▜██',
+" \ '██    ██  ██▀▀▀▀▀▘  ██▖  ▗██   ▜█▙▟█▛   ██  ██  ██  ██',
+" \ '██    ██  ▜█▙▄▄▄▟▊  ▀██▙▟██▀   ▝████▘   ██  ██  ██  ██',
+" \ '▀▀    ▀▀   ▝▀▀▀▀▀     ▀▀▀▀       ▀▀     ▀▀  ▀▀  ▀▀  ▀▀',
+" \ '',
+" \]
+let s:startify_ascii_header = [
+ \ '     _   __                _     __    ',
+ \ '    / | / /__  ____ _   __(_)___/ /__  ',
+ \ '   /  |/ / _ \/ __ \ | / / / __  / _ \ ',
+ \ '  / /|  /  __/ /_/ / |/ / / /_/ /  __/ ',
+ \ ' /_/ |_/\___/\____/|___/_/\__,_/\___/  ',
+ \ '',
+ \]
+let g:startify_custom_header = map(s:startify_ascii_header +
+        \ startify#fortune#quote(), '"   ".v:val')
+let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   MRU']            },
+          "\ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+          "\ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ { 'type': 'commands',  'header': ['   Commands']       },
+          \ ]

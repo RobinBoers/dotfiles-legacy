@@ -1,9 +1,10 @@
-file:///opt/lampp/htdocs
-file:///home/robin/Scripts
-file:///home/robin/.config
-file:///home/robin/.minecraft
-file:///home/robin/Videos
-file:///home/robin/Pictures
-file:///home/robin/Music
-file:///home/robin/Downloads
-file:///home/robin/Documents
+file:///home/robin/Documents Documents
+file:///home/robin/Pictures Pictures
+file:///home/robin/Music Music
+file:///home/robin/Pictures/Screenshots Screenshots
+file:///home/robin/Downloads Downloads
+file:///home/robin/Videos Videos
+file:///home/robin/Scripts Scripts
+file:///home/robin/.minecraft .minecraft
+file:///opt/lampp/htdocs htdocs
+file:///home/robin/.config .config

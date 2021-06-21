@@ -44,12 +44,12 @@ foreground = ${colors.foreground}
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Ubuntu Bold:pixelsize=10;2
-font-1 = Ubuntu Bold:size=8:weight=bold:antialias=true;0
-font-2 = Ubuntu Bold:pixelsize=10;0
+font-0 = fixed:pixelsize=10;2
+font-1 = size=8:weight=bold:antialias=true;0
+font-2 = pixelsize=10;0
 
 modules-center = mpd
-modules-right = xbacklight pulseaudio wlan eth battery temperature date powermenu
+modules-right = xbacklight pulseaudio wlan eth battery temperature date my-text-label
 
 tray-position = right
 tray-padding = 5
@@ -58,7 +58,7 @@ tray-padding = 5
 ;wm-restack = bspwm
 ;wm-restack = i3
 
-;override-redirect = true
+override-redirect = false
 
 ;scroll-up = bspwm-desknext
 ;scroll-down = bspwm-deskprev
@@ -253,34 +253,32 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-[module/powermenu]
-type = custom/menu
+;[module/powermenu]
+;type = custom/menu
+;
+;expand-right = true
+;
+;format-spacing = 1
+;
+;label-open = MENU
+;label-open-foreground = ${colors.secondary}
+;label-close = CANCEL
+;label-close-foreground = ${colors.secondary}
+;label-separator = |
+;label-separator-foreground = ${colors.foreground-alt}
 
-expand-right = true
+;menu-0-0 = reboot
+;menu-0-0-exec = reboot
+;menu-0-1 = power off
+;menu-0-1-exec = shutdown now
+;menu-0-2 = logout
+;menu-0-2-exec = openbox --exit
 
-format-spacing = 1
+[module/my-text-label]
+type = custom/text
+content = POWER
 
-label-open = MENU
-label-open-foreground = ${colors.secondary}
-label-close = CANCEL
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
+click-left = rofi-power "openbox --exit"
 
 [settings]
 screenchange-reload = true

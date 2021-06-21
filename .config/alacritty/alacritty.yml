@@ -1,40 +1,70 @@
 window:
-  padding:
-    x: 5
-    y: 5
+    padding:
+        x: 5
+        y: 5
 
 scrolling:
-  history: 10000
-  auto_scroll: true
-  tabspaces: 4
+    history: 10000
+    auto_scroll: true
+    tabspaces: 4
 
 dynamic_title: false
 live_config_reload: true
+#background_opacity: 0.83
 
+# Colors (frontend-delight)
 colors:
-  # Default colors
-  primary:
-    background: '0x1b1c1d'
-    foreground: '0xadadad'
+    # Default colors
+    primary:
+        background: "0x1b1c1d"
+        foreground: "0xadadad"
 
-  # Normal colors
-  normal:
-    black:   '0x242526'
-    red:     '0xf8511b'
-    green:   '0x565747'
-    yellow:  '0xfa771d'
-    blue:    '0x2c70b7'
-    magenta: '0xf02e4f'
-    cyan:    '0x3ca1a6'
-    white:   '0xadadad'
+    # Normal colors
+    normal:
+        black: "0x242526"
+        red: "0xf8511b"
+        green: "0x565747"
+        yellow: "0xfa771d"
+        blue: "0x2c70b7"
+        magenta: "0xf02e4f"
+        cyan: "0x3ca1a6"
+        white: "0xadadad"
 
-  # Bright colors
-  bright:
-    black:   '0x5fac6d'
-    red:     '0xf74319'
-    green:   '0x74ec4c'
-    yellow:  '0xfdc325'
-    blue:    '0x3393ca'
-    magenta: '0xe75e4f'
-    cyan:    '0x4fbce6'
-    white:   '0x8c735b'
+    # Bright colors
+    bright:
+        black: "0x5fac6d"
+        red: "0xf74319"
+        green: "0x74ec4c"
+        yellow: "0xfdc325"
+        blue: "0x3393ca"
+        magenta: "0xe75e4f"
+        cyan: "0x4fbce6"
+        white: "0x8c735b"
+# Colors (Ubuntu)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '#300a24'
+#     foreground: '#eeeeec'
+
+#   # Normal colors
+#   normal:
+#     black:   '#2e3436'
+#     red:     '#cc0000'
+#     green:   '#4e9a06'
+#     yellow:  '#c4a000'
+#     blue:    '#3465a4'
+#     magenta: '#75507b'
+#     cyan:    '#06989a'
+#     white:   '#d3d7cf'
+
+#   # Bright colors
+#   bright:
+#     black:   '#555753'
+#     red:     '#ef2929'
+#     green:   '#8ae234'
+#     yellow:  '#fce94f'
+#     blue:    '#729fcf'
+#     magenta: '#ad7fa8'
+#     cyan:    '#34e2e2'
+#     white:   '#eeeeec'

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Metacity
+Comment=Log in using GNOME Metacity
+Exec=/usr/bin/metacity-session
+TryExec=/usr/bin/metacity-session
+Icon=ubuntu
+Type=Application

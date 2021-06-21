@@ -1,1 +1,6 @@
-@import 'colors.css';
+.solid-csd decoration {
+        margin: 0px;
+}
+.solid-csd & {
+        margin: 0px;
+}

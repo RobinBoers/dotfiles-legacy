@@ -29,10 +29,10 @@ configuration {
 window {
     transparency:                   "real";
     text-color:                     @foreground;
-    background-color: #ffffff20;
+    background-color: #91380020;
     border:							0% 0.1% 0.1% 0%;
     border-radius:                  0% 0% 20px 0%;
-	  border-color:					#ffffff50;
+	  border-color:					#ffb04a50;
     padding: 0% 5% 5% 0%;
 	  width:							45%;
     anchor:     north west;
@@ -97,9 +97,9 @@ mainbox {
     children:                       [ inputbar, listview ];
     spacing:                       	2%;
     padding:                        2% 1% 2% 1%;
-    background-color:               #1c1c1c30;
+    background-color:               #70001980;
     border:							0% 0.1% 0.1% 0%;
-  	border-color:					#1c1c1c50; /*#1c00078, #ffb04a50*/
+  	border-color:					#ffb04a50; /*#1c00078*/
 }
 
 element {

@@ -206,10 +206,16 @@
         <command>rofi -show drun -theme ob</command>
       </action>
     </keybind>
+    <!-- HUD -->
+    <keybind key="C-A-S-F9">
+      <action name="Execute">
+        <command>python /home/robin/Scripts/hud.py</command>
+      </action>
+    </keybind>
     <keybind key="A-F4">
       <action name="Execute">
         <command>rofi-power</command>
-        <!-- nwgbar -->
+        <!-- nwg-bar -->
       </action>
     </keybind>
     <keybind key="W-r">
@@ -574,7 +580,7 @@
             <direction>vertical</direction>
             <action name="MoveResizeTo">
               <x>center</x>
-              <!-- we center windows in order to mitigate discrepancies 
+              <!-- we center windows in order to mitigate discrepancies
           between window placement and mouse cursor -->
               <y>current</y>
             </action>
@@ -902,7 +908,7 @@
   # order that they appear in this list
 
 
-    # each rule element can be left out or set to 'default' to specify to not 
+    # each rule element can be left out or set to 'default' to specify to not
     # change that attribute of the window
 
     <decor>yes</decor>

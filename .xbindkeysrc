@@ -80,7 +80,7 @@
 "python /home/robin/Scripts/hud.py"
    control + alt + shift + F9
 
-"rofi -show run -theme ob"
+"rofi -show run -theme hud"
    mod4 + r
 
 "alacritty"
@@ -101,7 +101,7 @@
 "rofi-packages"
    mod4 + shift + p
 
-"rofimoji --action copy --rofi-args '-theme ob'"
+"rofimoji --action copy --rofi-args '-theme hud'"
    mod4 + shift + e
 
 # Increase volume

@@ -1,7 +1,5 @@
 /**
- * ROFI Color theme
- * User: Qball
- * Copyright: Dave Davenport
+ * Rofi theme made by Qball and forked by Robijntje for use in his i3 setup.
  */
 * {
     background-color:      #2F343F ;

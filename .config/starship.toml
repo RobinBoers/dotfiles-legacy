@@ -1,6 +1,10 @@
 # Do not insert a blank line between shell prompts
 add_newline = false
 
+#[character]
+#success_symbol = "[➜](bold green) "
+#error_symbol = "[➜](bold red) "
+
 # Disable 2 line prompt
 [line_break]
 disabled = true

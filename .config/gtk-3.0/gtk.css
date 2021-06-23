@@ -4,3 +4,40 @@
 .solid-csd & {
         margin: 0px;
 }
+
+/*
+ Decrease the size of head bars for non-CSD applications
+ Gnome 20 (Fedora 24) compatible version
+ https://unix.stackexchange.com/questions/276951/how-to-change-the-titlebar-height-in-standard-gtk-apps-and-those-with-headerbars
+*/
+
+/* x11 and xwayland windows */
+window.ssd headerbar.titlebar {
+    padding: 4px; 
+    padding-right: 5px;
+    min-height: 0;
+    /* remove border between titlebar and window */
+    border: none;
+}
+
+window.ssd headerbar.titlebar button.titlebutton {
+    padding: 2px;
+    min-height: 0;
+    min-width: 0;
+}
+
+
+/* native wayland ssd windows */
+.default-decoration {
+    padding: 4px;
+    padding-right: 5px;
+    min-height: 0;
+    /* remove border between titlebar and window */
+    border: none;
+}
+
+.default-decoration .titlebutton {
+    padding: 2px;
+    min-height: 0;
+    min-width: 0;
+}

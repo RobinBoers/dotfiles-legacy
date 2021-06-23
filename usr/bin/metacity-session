@@ -1,6 +1,7 @@
 #!/bin/bash
 
 metacity &
+#compiz --use-root-window &
 wm_pid=$!
 
 nitrogen --restore &
@@ -24,7 +25,9 @@ fi
 python /home/robin/Scripts/hud-service.py &
 
 dockx &
-/home/robin/Scripts/status.sh | lemonbar -g 1920x25 -B "#ff1d1c25" -f "Ubuntu:size=11" -f 'Font Awesome 5 Free' -f 'Font Awesome 5 Brands' -f 'Font Awesome 5 Free Solid' & 
+#/home/robin/Scripts/status.sh | lemonbar -g 1920x25 -B "#ff323030" -f "Ubuntu:size=11" -f 'Font Awesome 5 Free' -f 'Font Awesome 5 Brands' -f 'Font Awesome 5 Free Solid' &
+tint2 &
+
 
 rsibreak &
 redshift &
@@ -45,4 +48,3 @@ xset b off
 devilspie &
 
 wait $wm_pid
-

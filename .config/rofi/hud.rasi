@@ -80,10 +80,9 @@ inputbar {
 
 listview {
     background-color:               @background-alt;
-    columns:                        5;
-    lines:                          3;
+    lines:                          4;
     spacing:                        0%;
-    cycle:                          false;
+    cycle:                          true;
     dynamic:                        true;
     layout:                         vertical;
 }
@@ -94,21 +93,21 @@ mainbox {
     children:                       [ inputbar, listview ];
     spacing:                       	2%;
     padding:                        2% 1% 2% 1%;
-     background-color:               #1c1c1c80;
-         border:							0% 0.1% 0.1% 0%;
-   	border-color:					#1c1c1c; /*#1c00078, #ffb04a50*/
-    }
+    background-color:               #1c1c1c80;
+        border:							0% 0.1% 0.1% 0%;
+   border-color:					#1c1c1c; /*#1c00078, #ffb04a50*/
+}
 
 element {
     background-color:               @background-alt;
     text-color:                     @foreground;
     orientation:                    vertical;
     border-radius:                  0%;
-    padding:                        2% 0% 2% 0%;
+    padding:                        0% 0% 2% 0%;
 }
 
 element-icon {
-    size:                           64px;
+    size:                           0px;
     border:                         0px;
 }
 

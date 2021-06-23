@@ -29,6 +29,7 @@ Brightness() {
 # Print the clock
 
 while true; do
-        echo "   Activities %{c}$(Clock) %{r} $(Volume)  $(Brightness)  $(Battery)   "
+        #echo "   Activities %{c}$(Clock) %{r} $(Volume)  $(Brightness)  $(Battery)   "
+        echo "%{c}$(Clock) %{r} $(Volume)  $(Brightness)  $(Battery)   "
         sleep 1
 done

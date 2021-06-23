@@ -1,7 +1,5 @@
 /**
- * ROFI Color theme
- * User: Qball
- * Copyright: Dave Davenport
+ * Rofi theme made by Robijntje for his Openbox setup.
  */
 * {
     text-color:         #adadad;

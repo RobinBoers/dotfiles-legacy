@@ -1,130 +1,52 @@
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
+/**
+ * Rofi theme made by Robijntje for his Openbox setup.
  */
-
 configuration {
-	  font:							"Noto Sans Bold 10";
-    show-icons:                     true;
-    display-drun: 					"";
-    drun-display-format:            "{name}";
-    disable-history:                false;
-    fullscreen:                     false;
-	  hide-scrollbar: 				true;
-	  sidebar-mode: 					false;
+         show-icons: true;
+         icon-theme: "Mint-Y-Aqua";
 }
 
 * {
-    background:                     #00000000;
-    background-alt:              	#00000000;
-    background-bar:                 #1c000c50;
-    foreground:                     #f2f2f2EE;
-    accent:			            	#3DAEE966;
+    text-color:         #adadad;
+    font:            	"DejaVu Sans Mono 11";
+    background-color:         #FFFFFF00;
+    border-color:       #FFFFFF00;
 }
 
 window {
-    transparency:                   "real";
-    text-color:                     @foreground;
-    background-color: #91380020;
-    border:							0% 0.1% 0.1% 0%;
-    border-radius:                  0% 0% 20px 0%;
-	  border-color:					#ffb04a50;
-    padding: 0% 5% 5% 0%;
-	  width:							45%;
     anchor:     north west;
     location:   north west;
-    y-offset: 25px;
-    x-offset: 66px;
+    width:      35%;
+    height:     40%;
+    padding:    2px;
+    children:   [ horibox ];
+    background-color:      #1d1c25c8;
+    border-color:          #1d1c25c8;
+
 }
 
-prompt {
-    enabled: 						true;
-	  padding: 						0.50% 0% 0% 0%;
-	  background-color: 				@background-alt;
-	  text-color: 					@foreground;
-    font:							"Font Awesome 5 Free 13";
-}
-
-textbox-prompt-colon {
-content: "";
-background-color: 				@background-alt;
-text-color: 					@foreground;
-expand: false;
-padding: 						-0.5% 0.6% 0% 0%;
-font:							"Font Awesome 5 Free 17";
-}
-
-entry {
-    background-color:               @background-alt;
-    text-color:                     @foreground;
-    placeholder-color:              @foreground;
-    expand:                         true;
-    horizontal-align:               0;
-    padding: 						-0.8% 0% 0% 0%;
-    placeholder:                    "Search...";
-    font:							"Noto Sans Italic 15";
-}
-
-inputbar {
-  	children: 						[ textbox-prompt-colon, entry ];
-    background-color:               @background-bar;
-    text-color:                     @foreground;
-    expand:                         false;
-	  border:							0.1%;
-    border-radius:                  3px;
-	  border-color:					#ffffff;
-    margin:                         0% 0% 0% 0%;
-    padding:                        12px;
+horibox {
+    orientation: horizontal;
+    children:   [ prompt, entry, listview ];
 }
 
 listview {
-    background-color:               @background-alt;
-    lines:                          4;
-    spacing:                        0%;
-    cycle:                          true;
-    dynamic:                        true;
-    layout:                         vertical;
+    layout:     vertical;
+    spacing:    5px;
+    lines:      100;
 }
 
-mainbox {
-    background-color:               @background-alt;
-    border-radius:                  0% 0% 0% 0%;
-    children:                       [ inputbar, listview ];
-    spacing:                       	2%;
-    padding:                        2% 1% 2% 1%;
-    background-color:               #70001980;
-    border:							0% 0.1% 0.1% 0%;
-  	border-color:					#ffb04a50; /*#1c00078*/
+entry {
+    expand:     false;
+    width:      10em;
+    padding: 0px 9px;
 }
 
 element {
-    background-color:               @background-alt;
-    text-color:                     @foreground;
-    orientation:                    vertical;
-    border-radius:                  0%;
-    padding:                        0% 0% 2% 0%;
+    padding: 0px 1px;
 }
-
-element-icon {
-    size:                           0px;
-    border:                         0px;
-}
-
-element-text {
-    expand:                         true;
-    horizontal-align:               0.5;
-    vertical-align:                 0.5;
-    margin:                         0.5% 0.5% -0.5% 0.5%;
-}
-
 element selected {
-    background-color:               @background-bar;
-    text-color:                     @foreground;
-	  border:							0% 0% 0% 0%;
-    border-radius:                  12px;
-    border-color:                  	@accent;
+    color: #ffffff;
 }
+
+element-icon { size:2ch ; }

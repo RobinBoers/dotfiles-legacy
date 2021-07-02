@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Unity Dash
-Exec=rofi -combi-modi drun,window -modi run,combi -show combi -theme ob-new
-Icon=/home/robin/Pictures/ubuntu.png
+Exec=rofi -combi-modi drun,window -modi run,combi -show combi -theme ob-new -window-thumbnail
+Icon=/home/robin/Pictures/Icons/ubuntu.png
 Type=Application
 Comment=
 Path=

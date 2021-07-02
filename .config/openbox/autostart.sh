@@ -44,7 +44,7 @@ plank &
 
 xinput set-prop "Synaptics TM3336-001" "libinput Natural Scrolling Enabled" 1
 xinput set-prop "Synaptics TM3336-001" "libinput Tapping Enabled" 1
-xinput set-prop "Synaptics TM3336-001" "libinput Accel Speed" .2
+#xinput set-prop "Synaptics TM3336-001" "libinput Accel Speed" .2
 
 setxkbmap -layout us -variant intl
 xset b off

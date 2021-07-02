@@ -74,10 +74,10 @@
 "rofi-power"
    alt + F4
 
-"rofi -combi-modi drun,window -show combi -theme ob-new"
+"dash"
    alt + F1
 
-"python /home/robin/Scripts/hud.py"
+"/home/robin/Scripts/hud.sh"
    control + alt + shift + F9
 
 "rofi -show run -theme hud"

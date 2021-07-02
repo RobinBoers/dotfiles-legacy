@@ -25,12 +25,13 @@ fi
 python /home/robin/Scripts/hud-service.py &
 
 dockx &
-#/home/robin/Scripts/status.sh | lemonbar -g 1920x25 -B "#ff323030" -f "Ubuntu:size=11" -f 'Font Awesome 5 Free' -f 'Font Awesome 5 Brands' -f 'Font Awesome 5 Free Solid' &
+#/home/robin/Scripts/status.sh | lemonbar -g 1920x25 -B "#ff323030" -f "Ubuntu:size=11" -f 'Font Awesome 5 Free' -f 'Font Awesome 5 Brands' -f 'Font Awesome 5 Free Solid' & 
 tint2 &
 
 
 rsibreak &
 redshift &
+volumeicon &
 
 xfce4-power-manager &
 
@@ -40,7 +41,7 @@ lxsession &
 
 xinput set-prop "Synaptics TM3336-001" "libinput Natural Scrolling Enabled" 1
 xinput set-prop "Synaptics TM3336-001" "libinput Tapping Enabled" 1
-xinput set-prop "Synaptics TM3336-001" "libinput Accel Speed" .2
+#xinput set-prop "Synaptics TM3336-001" "libinput Accel Speed" .2
 
 setxkbmap -layout us -variant intl
 xset b off
@@ -48,3 +49,4 @@ xset b off
 devilspie &
 
 wait $wm_pid
+

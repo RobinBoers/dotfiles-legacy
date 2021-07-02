@@ -76,7 +76,7 @@ def try_appmenu_interface(window_id):
   if 'dmenu' in sys.argv:
     menu_cmd = subprocess.Popen(['dmenu', '-i', '-l', '15'], stdout=subprocess.PIPE, stdin=subprocess.PIPE)
   else:
-    menu_cmd = subprocess.Popen(['rofi', '-dmenu', '-i', '-theme', 'hud'], stdout=subprocess.PIPE, stdin=subprocess.PIPE)
+    menu_cmd = subprocess.Popen(['rofi', '-dmenu', '-i', '-theme', 'ob'], stdout=subprocess.PIPE, stdin=subprocess.PIPE)
   menu_cmd.stdin.write(menu_string.encode('utf-8'))
   menu_result = menu_cmd.communicate()[0].decode('utf8').rstrip()
   menu_cmd.stdin.close()
@@ -156,7 +156,7 @@ def try_gtk_interface(gtk_bus_name_cmd, gtk_object_path_cmd):
   if 'dmenu' in sys.argv:
     menu_cmd = subprocess.Popen(['dmenu', '-i', '-l', '15'], stdout=subprocess.PIPE, stdin=subprocess.PIPE)
   else:
-    menu_cmd = subprocess.Popen(['rofi', '-dmenu', '-i', '-theme', 'hud'], stdout=subprocess.PIPE, stdin=subprocess.PIPE)
+    menu_cmd = subprocess.Popen(['rofi', '-dmenu', '-i', '-theme', 'ob'], stdout=subprocess.PIPE, stdin=subprocess.PIPE)
   menu_cmd.stdin.write(menu_string.encode('utf-8'))
   menu_result = menu_cmd.communicate()[0].decode('utf8').rstrip()
   menu_cmd.stdin.close()

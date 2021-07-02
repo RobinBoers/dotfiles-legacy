@@ -209,7 +209,7 @@
     <!-- HUD -->
     <keybind key="C-A-S-F9">
       <action name="Execute">
-        <command>python /home/robin/Scripts/hud.py</command>
+        <command>python /home/robin/Scripts/hud-ob.py</command>
       </action>
     </keybind>
     <keybind key="A-F4">

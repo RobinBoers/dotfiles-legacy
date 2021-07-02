@@ -1,0 +1,5 @@
+#!/bin/bash
+eval "$(xdotool getmouselocation --shell)"
+xdotool mousemove 0 50
+rofi -modi run,combi, -combi-modi drun,window -show combi -theme ob-new
+xdotool mousemove --screen $SCREEN $X $Y

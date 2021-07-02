@@ -21,15 +21,19 @@ configuration {
     background-bar:                 #1c000c50;
     foreground:                     #f2f2f2EE;
     accent:			            	#3DAEE966;
+    window-background:              #ffffff20;
+    window-border:                  #ffffff50;
+    box-background:                 #1c1c1c80;
+    box-border:                     #1c1c1c;
 }
 
 window {
     transparency:                   "real";
     text-color:                     @foreground;
-    background-color: #ffffff20;
+    background-color: @window-background;
     border:							0% 0.1% 0.1% 0%;
     border-radius:                  0% 0% 20px 0%;
-	  border-color:					#ffffff50;
+	  border-color:					@window-border;
     padding: 0% 5% 5% 0%;
 	  width:							45%;
     anchor:     north west;
@@ -80,7 +84,7 @@ inputbar {
 
 listview {
     background-color:               @background-alt;
-    lines:                          4;
+    lines:                          7;
     spacing:                        0%;
     cycle:                          true;
     dynamic:                        true;
@@ -93,9 +97,9 @@ mainbox {
     children:                       [ inputbar, listview ];
     spacing:                       	2%;
     padding:                        2% 1% 2% 1%;
-    background-color:               #1c1c1c80;
+    background-color:               @box-background;
         border:							0% 0.1% 0.1% 0%;
-   border-color:					#1c1c1c; /*#1c00078, #ffb04a50*/
+   border-color:					@box-border; /*#1c00078, #ffb04a50*/
 }
 
 element {
@@ -103,7 +107,7 @@ element {
     text-color:                     @foreground;
     orientation:                    vertical;
     border-radius:                  0%;
-    padding:                        0% 0% 2% 0%;
+    padding:                        0% 0% 1% 0%;
 }
 
 element-icon {
@@ -113,9 +117,8 @@ element-icon {
 
 element-text {
     expand:                         true;
-    horizontal-align:               0.5;
-    vertical-align:                 0.5;
-    margin:                         0.5% 0.5% -0.5% 0.5%;
+    /*horizontal-align:               0.5;*/
+    margin:                         1px 1px 1px 15px;
 }
 
 element selected {

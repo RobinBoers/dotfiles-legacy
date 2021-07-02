@@ -1,0 +1,4 @@
+(if
+    (is (window_property "_NET_WM_STATE(ATOM)") "_NET_WM_STATE_MAXIMIZED_HORZ, _NET_WM_STATE_MAXIMIZED_VERT")
+    (begin (undecorate)))
+

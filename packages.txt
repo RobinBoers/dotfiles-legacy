@@ -51,7 +51,7 @@ flex
 fortune-mod
 gcc
 git
-github-desktop-bin
+github-cli
 gjs
 glade
 gnome-themes-extra

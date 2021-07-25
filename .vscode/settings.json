@@ -13,12 +13,9 @@
     "workbench.colorTheme": "Nord",
     "extensions.ignoreRecommendations": true,
     "git.autofetch": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
     "editor.fontSize": 21,
     "editor.wordWrap": "on",
     "editor.quickSuggestions": true,

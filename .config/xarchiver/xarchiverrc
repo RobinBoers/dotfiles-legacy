@@ -1,10 +1,10 @@
 [xarchiver]
-preferred_format=-1
+preferred_format=0
 prefer_unzip=true
 confirm_deletion=true
 sort_filename_content=false
 store_output=false
-icon_size=0
+icon_size=2
 show_archive_comment=false
 show_sidebar=true
 show_location_bar=true

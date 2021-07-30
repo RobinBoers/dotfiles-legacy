@@ -19,7 +19,7 @@ export TERM=xterm-256color
 
 # Fetch message
 #neofetch
-fm6000 -c cyan --r -n
+#fm6000 -c cyan --r -n
 
 # Starship promt (cross shell)
 starship init fish | source

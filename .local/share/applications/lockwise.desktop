@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Name=Lockwise
+GenericName=Password Manager
+Comment=A password manager you can trust
+Comment[nl]=Een password manager die je kan vertrouwen
+Keywords=Password;Passwords;Manager;
+Exec=/usr/lib/firefox/firefox about:logins
+Icon=/home/robin/Pictures/Icons/lockwise.png
+Type=Application
+Categories=Network;WebBrowser;

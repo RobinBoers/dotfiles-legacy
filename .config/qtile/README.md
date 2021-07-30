@@ -21,6 +21,17 @@ The wallpaper is made by Romain Trystram and can be found here:
 
 Dependencies: `firefox, alacritty, pactl, xbacklight, playerctl, rofi, dunst, lxsession, nitrogen, betterlockscreen, xcape`
 
+## Setup Firefox theme
+
+1. **Enable userChrome.css**:  
+go to about:config and change toolkit.legacyUserProfileCustomizations.stylesheets to "true"
+
+2. **Change about:blank color**:  
+go to about:config again an change browser.display.background_color to "#1b1c1d"
+
+3. **Revert UI back from Proton**:  
+go to about:config for the last time and change browser.proton.enabled to "false"
+
 ## Screenshots
 
 ![](screenshot.png)

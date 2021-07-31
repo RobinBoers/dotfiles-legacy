@@ -25,7 +25,7 @@ fi
 python /home/robin/Scripts/hud-service.py &
 
 dockx &
-#/home/robin/Scripts/status.sh | lemonbar -g 1920x25 -B "#ff323030" -f "Ubuntu:size=11" -f 'Font Awesome 5 Free' -f 'Font Awesome 5 Brands' -f 'Font Awesome 5 Free Solid' & 
+#/home/robin/Scripts/status.sh | lemonbar -g 1920x25 -B "#ff323030" -f "Ubuntu:size=11" -f 'Font Awesome 5 Free' -f 'Font Awesome 5 Brands' -f 'Font Awesome 5 Free Solid' &
 tint2 &
 
 
@@ -34,6 +34,7 @@ redshift &
 volumeicon &
 
 xfce4-power-manager &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 nm-applet &
 
@@ -49,4 +50,3 @@ xset b off
 devilspie &
 
 wait $wm_pid
-

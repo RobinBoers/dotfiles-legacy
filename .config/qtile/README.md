@@ -14,12 +14,13 @@ My config has a top panel with my workspaces, current window title and useful in
 
 This config uses nitrogen, just like all my other configs. For networking I'm using NetworkManager-applet.  
 All workspaces use the master and stack layout (columns in Qtile), exept games and edit. Games uses max, and  
-edit a floating layout.
+edit a floating layout.  
+I also added the HUD functionality from my Metacity session. To search application menus, just hit Alt and rofi will do the rest.
 
 The wallpaper is made by Romain Trystram and can be found here:
 <https://imgur.com/gallery/84o43>
 
-Dependencies: `firefox, alacritty, pactl, xbacklight, playerctl, rofi, dunst, lxsession, nitrogen, betterlockscreen, xcape`
+Dependencies: `firefox, alacritty, pactl, xbacklight, playerctl, rofi, dunst, lxsession, nitrogen, xcape, light-locker`
 
 ## Setup Firefox theme
 

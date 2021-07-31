@@ -38,3 +38,5 @@ if [ -z "$UBUNTU_MENUPROXY" ]
 then
 	  UBUNTU_MENUPROXY=1
 fi
+
+python /home/robin/Scripts/hud-service.py &

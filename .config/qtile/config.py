@@ -72,7 +72,7 @@ keys = [
     Key([mod], "w", lazy.spawn(browser), desc="Launch webbrowser"),
 
     # Lock the screen with Super+L
-    Key([mod], "l", lazy.spawn("betterlockscreen --lock dim"), desc="Lock screen"),
+    Key([mod], "l", lazy.spawn("light-locker-command -l"), desc="Lock screen"),
 
     # Kill windows
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
@@ -84,6 +84,8 @@ keys = [
     # Dmenu & Rofi
     Key(["mod4"], "r", lazy.spawn("rofi -show run -theme qmenu"), desc="Launch Rofi"),
     Key(["mod1"], "F1", lazy.spawn("rofi -show drun -theme qmenu"), desc="Launch Rofi (alt)"),
+
+    Key(["control","mod1","shift"], "F9", lazy.spawn("python /home/robin/Scripts/hud-qtile.py"), desc="Search menus"),
 
     # Restart & Quit qtile
     Key(["control", "mod1"], "r", lazy.restart(), desc="Restart Qtile"),

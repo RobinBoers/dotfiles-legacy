@@ -71,6 +71,9 @@
 "firefox"
    mod4 + w
 
+"light-locker-command -l"
+   mod4 + l
+
 "rofi-power"
    alt + F4
 

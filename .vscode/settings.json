@@ -8,25 +8,31 @@
 // This file is part of Robijntjes dotfiles
 //
 {
-    "window.zoomLevel": 0,
+    "window.restoreWindows": "folders",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Nord",
-    "extensions.ignoreRecommendations": true,
-    "git.autofetch": true,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
-    "editor.fontSize": 21,
+    "workbench.tips.enabled": false,
     "editor.wordWrap": "on",
-    "editor.quickSuggestions": true,
-    "editor.autoClosingBrackets": "always",
-    "editor.formatOnType": true,
-    "editor.suggestOnTriggerCharacters": true,
-    "editor.acceptSuggestionOnEnter": "smart",
-    "html.autoClosingTags": true,
-    "html.format.enable": true,
-    "html.validate.scripts": true,
-    "html.suggest.html5": true,
+    "editor.fontSize": 21,
+    "colorize.include": ["*"],
+    "window.dialogStyle": "custom",
     "window.titleBarStyle": "custom",
-    "window.restoreFullscreen": true
-}
+    "redhat.telemetry.enabled": true,
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.jsxBracketSameLine": true,
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 10000,
+    "prettier.proseWrap": "never",
+    "security.workspace.trust.untrustedFiles": "open",
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
+    "editor.fontFamily": "'Cascadia Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.colorTheme": "Frondend Delight"
+  }
+  

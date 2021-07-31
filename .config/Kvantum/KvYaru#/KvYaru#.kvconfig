@@ -113,8 +113,8 @@ transparent_menutitle=false
 respect_darkness=false
 kcapacitybar_as_progressbar=true
 force_size_grip=false
-iconless_pushbutton=false
-iconless_menu=false
+iconless_pushbutton=true
+iconless_menu=true
 disabled_icon_opacity=100
 normal_default_pushbutton=false
 single_top_toolbar=true
@@ -127,6 +127,7 @@ transparent_arrow_button=true
 kinetic_scrolling=false
 centered_forms=false
 noninteger_translucency=false
+style_vertical_toolbars=false
 
 [PanelButtonCommand]
 frame=true

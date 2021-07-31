@@ -6,7 +6,8 @@ alias l='ls -CF'
 alias meow='cat'
 alias hack='ping'
 
-alias apt='pamac'
+alias apt='pacman'
+alias yay='paru'
 
 alias rm='rm -i'
 alias cp='cp -i'
@@ -18,9 +19,6 @@ alias ..='cd ..'
 alias ...='cd ..; cd ..;'
 alias ....='cd ..; cd ..; cd ..'
 
-alias python='python3'
-alias pip='pip3'
-
 export EDITOR=vim
 alias bash_aliases='vim ~/.bash_aliases'
 alias vimrc='vim ~/.vimrc'
@@ -29,8 +27,6 @@ alias fishrc='vim ~/.config/fish/config.fish'
 alias vim='nvim'
 
 alias :q="exit"
-
-alias cat="bat"
 
 alias neo='neofetch'
 alias shotcut='flatpak run org.shotcut.Shotcut'

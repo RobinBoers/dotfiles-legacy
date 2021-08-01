@@ -53,10 +53,10 @@ go to about:config for the last time and change browser.proton.enabled to "false
     --short-notification-background: #0250bb !important;
     --short-notification-gradient: #9059ff !important;
 
-    --button-bgcolor: #1b1c1d !important;
+    /* --button-bgcolor: #1b1c1d !important;
     --button-hover-bgcolor: #1f1f1f !important;
     --button-active-bgcolor: #1f1f1f !important;
-    --button-color: #adadad !important;
+    --button-color: #adadad !important; */
     --button-primary-bgcolor: #f8511b !important;
     --button-primary-hover-bgcolor: color-mix(in srgb, black 10%, #f8511b) !important;
     --button-primary-active-bgcolor: color-mix(in srgb, black 20%, #f8511b) !important;
@@ -88,8 +88,8 @@ go to about:config for the last time and change browser.proton.enabled to "false
 
     --chrome-content-separator-color: ThreeDShadow !important;
 
-    --toolbarbutton-hover-background: var(--button-hover-bgcolor) !important;
-    --toolbarbutton-active-background: var(--button-active-bgcolor) !important;
+    /* --toolbarbutton-hover-background: var(--button-hover-bgcolor) !important;
+    --toolbarbutton-active-background: var(--button-active-bgcolor) !important; */
 
     --toolbarseparator-color: color-mix(in srgb, currentColor 20%, transparent) !important;
 
@@ -284,6 +284,17 @@ tab {
 #urlbar * {
     color: #adadad !important;
     fill: #adadad !important;
+}
+
+#urlbar-background {
+    border: 1px solid #3c3c3c !important;
+}
+
+#urlbar:not([breakout-extend]) #urlbar-background {
+    border: none !important;
+    border-left: 1px solid #3c3c3c !important;
+    border-right: 1px solid #3c3c3c !important;
+    border-radius: 0px !important;
 }
 
 #urlbar-background {

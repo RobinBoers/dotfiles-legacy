@@ -8,31 +8,31 @@
 // This file is part of Robijntjes dotfiles
 //
 {
-    "window.restoreWindows": "folders",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.tips.enabled": false,
-    "editor.wordWrap": "on",
-    "editor.fontSize": 21,
-    "colorize.include": ["*"],
-    "window.dialogStyle": "custom",
-    "window.titleBarStyle": "custom",
-    "redhat.telemetry.enabled": true,
-    "editor.formatOnSave": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "prettier.jsxBracketSameLine": true,
-    "prettier.tabWidth": 4,
-    "prettier.printWidth": 10000,
-    "prettier.proseWrap": "never",
-    "security.workspace.trust.untrustedFiles": "open",
-    "[json]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "editor.formatOnPaste": false,
-    "editor.formatOnType": false,
-    "gitlens.hovers.currentLine.over": "line",
-    "gitlens.currentLine.enabled": false,
-    "editor.fontFamily": "'Cascadia Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "workbench.productIconTheme": "fluent-icons",
-    "workbench.colorTheme": "Frondend Delight"
-  }
+  "window.restoreWindows": "folders",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.tips.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.fontSize": 21,
+  "colorize.include": ["*"],
+  "window.dialogStyle": "custom",
+  "redhat.telemetry.enabled": true,
+  "editor.formatOnSave": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.jsxBracketSameLine": true,
+  "prettier.tabWidth": 4,
+  "prettier.printWidth": 10000,
+  "prettier.proseWrap": "never",
+  "security.workspace.trust.untrustedFiles": "open",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.currentLine.enabled": false,
+  "editor.fontFamily": "'Cascadia Code','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "workbench.productIconTheme": "fluent-icons",
+  "workbench.colorTheme": "Frontend Delight",
+  "window.titleBarStyle": "custom"
+}
   

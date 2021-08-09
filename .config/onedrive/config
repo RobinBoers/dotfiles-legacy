@@ -4,6 +4,6 @@
 #
 sync_dir="/home/robin"
 skip_file = "~*|.~*|*.tmp"
-skip_dir = "Desktop|Documents/Github|VirtualBox VMs|Downloads|Arduino|iPhone|Afbeeldingen|.mozilla|.local|.chromium|.config"
+skip_dir = "Desktop|Documents/Github|VirtualBox VMs|Downloads|Arduino|iPhone|Afbeeldingen|.mozilla|.local|.chromium|.config|Videos/Archief"
 skip_dotfiles = "true"
 

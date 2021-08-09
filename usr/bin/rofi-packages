@@ -1,0 +1,14 @@
+#!/bin/bash
+
+eval "$(xdotool getmouselocation --shell)"
+xdotool mousemove 0 50
+
+query=$( paru -Slq | rofi -theme hud -dmenu -location 0 -p "Package > " )
+
+if [[ -n "$query" ]]; then
+       xdotool mousemove --screen $SCREEN $X $Y
+       alacritty -e paru -S $query
+else
+       xdotool mousemove --screen $SCREEN $X $Y
+       exit
+fi

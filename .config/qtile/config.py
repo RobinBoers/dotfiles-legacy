@@ -85,6 +85,11 @@ keys = [
     Key(["mod4"], "r", lazy.spawn("rofi -show run -theme qmenu"), desc="Launch Rofi"),
     Key(["mod1"], "F1", lazy.spawn("rofi -show drun -theme qmenu"), desc="Launch Rofi (alt)"),
 
+    Key(["mod4", "shift"], "p", lazy.spawn("rofi-qackages -theme qmoji"), desc="Search packages"),
+    Key(["mod4", "shift"], "e", lazy.spawn("rofimoji --action copy --rofi-args '-theme qmoji'"), desc="Launch emoji picker"),
+
+
+
     Key(["control","mod1","shift"], "F9", lazy.spawn("python /home/robin/Scripts/hud-qtile.py"), desc="Search menus"),
 
     # Restart & Quit qtile
@@ -332,12 +337,17 @@ screens = [
                     foreground = colors[2],
                     background = colors[0]
                 ), 
-                widget.Volume(
-                    fmt=" {}", 
-                    emoji=True,
+                #widget.Volume(
+                #    fmt=" {}", 
+                #    emoji=True,
+                #    foreground = colors[2],
+                #    background = colors[0],
+                #
+                #),
+                widget.TextBox(
                     foreground = colors[2],
                     background = colors[0],
-
+                    text="VOLUME ",
                 ),
                 widget.Volume(
                        foreground = colors[2],
@@ -404,7 +414,7 @@ screens = [
                 #    background = colors[0]
                 #),
                 widget.Clock(
-                    format = '%Y-%m-%d %H:%M',
+                    format = '%d-%m-%Y %H:%M',
                     background = colors[0],
                     foreground = colors[2]
                 ),

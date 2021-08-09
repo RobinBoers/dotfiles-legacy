@@ -1,0 +1,10 @@
+#!/bin/bash
+
+query=$( paru -Slq | rofi -theme qmoji -dmenu -location 0 -p "Package > " )
+
+if [[ -n "$query" ]]; then
+       alacritty -e paru -S $query
+       exit
+else
+       exit
+fi

@@ -59,8 +59,8 @@ keys = [
         desc="Split"),
 
     # Switch between workspaces / groups
-    Key(["control", "mod1"], "Left", lazy.screen.prevgroup(), desc="Previous workspace"),
-    Key(["control", "mod1"], "Right", lazy.screen.nextgroup(), desc="Next workspace"),
+    Key(["control", "mod1"], "Left", lazy.screen.prev_group(), desc="Previous workspace"),
+    Key(["control", "mod1"], "Right", lazy.screen.next_group(), desc="Next workspace"),
 
     Key(["mod1"], "Tab", lazy.function(latest_group), desc="Switch between 2 workspaces"),
     
@@ -88,7 +88,7 @@ keys = [
     Key(["mod4", "shift"], "p", lazy.spawn("rofi-qackages -theme qmoji"), desc="Search packages"),
     Key(["mod4", "shift"], "e", lazy.spawn("rofimoji --action copy --rofi-args '-theme qmoji'"), desc="Launch emoji picker"),
 
-
+    Key(["mod4", "shift"], "f", lazy.spawn("/home/robin/Scripts/qr-screenshot.sh"), desc="Launch emoji picker"),
 
     Key(["control","mod1","shift"], "F9", lazy.spawn("python /home/robin/Scripts/hud-qtile.py"), desc="Search menus"),
 
@@ -96,7 +96,7 @@ keys = [
     Key(["control", "mod1"], "r", lazy.restart(), desc="Restart Qtile"),
     Key(["control", "mod1"], "q", lazy.shutdown(), desc="Exit Qtile"),
 
-    Key([mod, "shift"], "s", lazy.spawn("scrot -s -f -e 'mv $f ~/Pictures/Screenshots/'"), desc="Take screenshot"),
+    Key([mod, "shift"], "s", lazy.spawn("scrot -s -f -e 'mv $f ~/Pictures/Screenshots/$f && xclip -selection clipboard -t image/png -i ~/Pictures/Screenshots/$f'"), desc="Take screenshot"),
     Key([mod, "shift"], "q", lazy.spawn("gpick"), desc="Open colorpicker"),
 
     # Volume control

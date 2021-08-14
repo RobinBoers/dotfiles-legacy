@@ -1,6 +1,7 @@
 #!/bin/sh
 
-nitrogen --restore &
+#nitrogen --restore &
+feh --randomize --bg-fill /home/robin/Pictures/wallpapers/*
 
 xcape -e 'Super_L=Alt_L|F1'
 xcape -e 'Alt_L=Control_L|Alt_L|Shift_L|F9'
@@ -19,11 +20,16 @@ setxkbmap -layout us -variant intl
 
 nm-applet &
 dunst &
+light-locker --no-lock-on-lid &
+
+xfce4-power-manager &
 
 rsibreak &
 
 #plank &
 volumeicon &
+
+xmodmap ~/.Xmodmap
 
 xset b off
 

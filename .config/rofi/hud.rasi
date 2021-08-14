@@ -21,9 +21,9 @@ configuration {
     background-bar:                 #1c000c50;
     foreground:                     #f2f2f2EE;
     accent:			            	#3DAEE966;
-    window-background:              #ffffff20;
-    window-border:                  #ffffff50;
-    box-background:                 #1c1c1c80;
+    window-background:              #00000020;
+    window-border:                  #00000050;
+    box-background:                 #1c1c1c70;
     box-border:                     #1c1c1c;
 }
 

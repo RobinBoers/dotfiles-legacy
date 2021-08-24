@@ -10,7 +10,7 @@ To reinstall all packages in my current setup:
 
 ### Qtile setup
 
-Also using the default panel in this setup. I customized it to use the frontend-delight color theme. I use gaps because I like them. Keybindings for most regular stuff. Also keybinded the media buttons using playerctl and the brightness stuff with xbacklight. Using kvantum KvGnome for QT and Adwaita dark for GTK+. Using nitrogen for the wallpaper and using Breeze icons.
+Also using the default panel in this setup. I customized it to use the frontend-delight color theme. I use gaps because I like them. Keybindings for most regular stuff. Also keybinded the media buttons using playerctl and the brightness stuff with xbacklight. Using Kvantum Yaru for Qt and Yaru for GTK+. Using nitrogen for the wallpaper and using Suru icons.
 
 [More info](.config/qtile)
 
@@ -27,7 +27,7 @@ I made a custom xsession using the Metacity window manager, DockBarX, tint2 and 
 ### Openbox setup
 
 I use the Yaru theme for openbox,  
-the Yaru theme for GTK+ and the Yaru icon theme. I like Yaru.
+the Yaru theme for GTK+, KvYaru for Qt and the Yaru icon theme. I like Yaru.
 
 The dock (plank) is on the left like in Unity and for the wallpaper I'm using nitrogen.
 

@@ -22,6 +22,8 @@ The wallpaper is made by Romain Trystram and can be found here:
 
 Dependencies: `firefox, alacritty, pactl, xbacklight, playerctl, rofi, dunst, lxsession, nitrogen, xcape, light-locker`
 
+(Also check out the MacOS themed version)[../qtile-macos/]
+
 ## Setup Firefox theme
 
 1. **Enable userChrome.css**:  

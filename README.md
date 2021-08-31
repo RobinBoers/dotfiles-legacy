@@ -14,7 +14,13 @@ Also using the default panel in this setup. I customized it to use the frontend-
 
 [More info](.config/qtile)
 
-![](.config/qtile/screenshot.png)
+### Qtile setup (MacOS edition)
+
+This version of my Qtile setup is exactly the same as the default version, but with a MacOS skin. It has a MacOS themed panel, blur effects, Spotlight theme for Rofi and rounded corners.
+
+[More info](.config/qtile-macos)
+
+![](.config/qtile-macos/screenshot.png)
 
 ### Metacity session
 

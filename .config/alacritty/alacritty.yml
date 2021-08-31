@@ -2,15 +2,36 @@ window:
     padding:
         x: 5
         y: 5
+    dynamic_title: false
+    title: Alacritty
+    live_config_reload: true
+    gtk_theme_variant: dark
 
 scrolling:
     history: 10000
     auto_scroll: true
     tabspaces: 4
 
-dynamic_title: false
-live_config_reload: true
-#background_opacity: 0.83
+background_opacity: 0.9
+
+font:
+  normal:
+    family: monospace
+    style: Regular
+
+  bold:
+    family: monospace
+    style: Bold
+
+  italic:
+    family: monospace
+    style: Italic
+
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+
+  size: 12
 
 # Colors (frontend-delight)
 colors:

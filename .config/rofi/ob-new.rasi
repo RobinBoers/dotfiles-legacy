@@ -110,6 +110,10 @@ element {
 element-icon {
     size:                           64px;
     border:                         0px;
+    color: white;
+    background-color: @background;
+    align: center;
+    position: center;
 }
 
 element-text {
@@ -117,6 +121,8 @@ element-text {
     horizontal-align:               0.5;
     vertical-align:                 0.5;
     margin:                         0.5% 0.5% -0.5% 0.5%;
+    color: white;
+    background-color: @background;
 }
 
 element selected {

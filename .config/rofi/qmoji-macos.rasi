@@ -1,6 +1,6 @@
 /*
  *
- * Rofi theme made by Robijntje. Made to look like the Unity Dash.
+ * Rofi theme made by Robijntje. Made to look like Spotlight.
  *
  */
 
@@ -100,12 +100,14 @@ element {
 element-icon {
     size: 0px;
     border: 0px;
+    background-color: @background;
 }
 
 element-text {
     expand: true;
     /*horizontal-align:               0.5;*/
     margin: 1px 1px 1px 15px;
+    background-color: @background;
 }
 
 element selected {

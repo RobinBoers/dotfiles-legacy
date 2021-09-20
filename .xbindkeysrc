@@ -132,16 +132,13 @@
 
 # Media controls
 
-"/usr/bin/playerctl play-pause"
+"playerctl play-pause"
    XF86AudioPlay
 
-"/usr/bin/playerctl pause"
-   XF86AudioPause
-
-"/usr/bin/playerctl next"
+"playerctl next"
    XF86AudioNext
 
-"/usr/bin/playerctl previous"
+"playerctl previous"
    XF86AudioPrev
 
 ##################################

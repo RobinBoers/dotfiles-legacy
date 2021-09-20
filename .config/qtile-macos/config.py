@@ -37,6 +37,8 @@ keys = [
     Key([mod], "Down", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "Up", lazy.layout.up(), desc="Move focus up"),
 
+    Key([mod], "h", lazy.hide_show_bar("bottom")),
+
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key([mod, "shift"], "Left", lazy.layout.shuffle_left(),
@@ -206,7 +208,8 @@ colors = [["#1b1c1d", "#1b1c1d"], # background color
 
 layouts = [
     layout.Columns(
-        border_width = 0
+        border_width = 0,
+        #margin = 10
     ),
     layout.Max(),
     layout.Floating(
@@ -239,9 +242,19 @@ extension_defaults = widget_defaults.copy()
 # Function to format window name
 # to get only the app name (for Firefox and Chromium etc.)
 def format_window_name(text):
-    for string in ["Discord", "Discord Updater", "Minecraft", "Minecraft Launcher", "Chromium", "Google Chrome", "Mozilla Firefox", "Mozilla Thunderbird", "Visual Studio Code"]:
-        if string in text:
-            text = string
+    # for string in ["Discord", "Discord Updater", "Minecraft", "Minecraft Launcher", "Chromium", "Google Chrome", "Mozilla Firefox", "Mozilla Thunderbird", "Visual Studio Code"]:
+    #     if string in text:
+    #         text = string
+    if text == "Code":
+        text = "Visual Studio Code"
+    if text == "Firefox":
+        text = "Mozilla Firefox"
+    if text == "Nemo":
+        text = "Finder"
+    if text == "Thunderbird":
+        text = "Mozilla Thunderbird"
+    if "sherlock" in text:
+        text = "Sherlock"
     return text
 
 # Displays the name of the window that currently has focus. No weird this for floating windows, stretch width or anything. Just the window name.
@@ -281,7 +294,7 @@ class AppName(base._TextBox):
                 state = '_'
             var = {}
             var["state"] = state
-            var["name"] = w.name
+            var["name"] = w.get_wm_class()[1].capitalize() 
             if callable(self.parse_text):
                 try:
                     var["name"] = self.parse_text(var["name"])
@@ -300,6 +313,26 @@ class Stretcher(base._TextBox):
     def __init__(self, width=bar.STRETCH, **config):
         base._TextBox.__init__(self, width=width, **config)
         self.add_defaults(AppName.defaults)
+
+dock = bar.Bar([
+        Stretcher(),
+        widget.TaskList(
+            borderwidth = 0,
+            max_title_width = 0,
+            markup_normal = "",
+            markup_floating = "",
+            markup_maximixed = "",
+            markup_focused = "",
+            markup_minimized = "",
+            background = colors[1],
+            #margin_x = 10,
+            padding = 1
+        ),
+        Stretcher()
+    ],
+    70,
+    background =  "#ffffff00"
+)
 
 screens = [
     Screen(
@@ -352,46 +385,41 @@ screens = [
                        urgent_text = colors[3]
                 ),
                 Stretcher(),
-                # widget.Systray(
-                #     padding = 5
+                widget.Systray(
+                     padding = 5,
+                     background = colors[1]
+                ),
+                #widget.Sep(
+                #    linewidth = 0,
+                #    padding = 15
+                #), 
+                widget.CheckUpdates(
+                       update_interval = 1800,
+                       distro = "Arch_checkupdates",
+                       display_format = " ",
+                       font = "Font Awesome 5 Free",
+                       no_update_string = " ",
+                       colour_no_updates = colors[2],
+                       colour_have_updates = colors[2],
+                       execute = terminal + '--hold -e sudo pacman -Syu',
+                       padding = 15
+                ),
+                # widget.TextBox(
+                #     text=icons["light"],
+                #     font = "Font Awesome 5 Free"
                 # ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 15
-                ), 
-                widget.TextBox(
-                    text=icons["light"],
-                    font = "Font Awesome 5 Free"
-                ),
-                widget.Backlight(
-                       backlight_name = "intel_backlight"
-                ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 15
-                ),
+                # widget.Backlight(
+                #        backlight_name = "intel_backlight"
+                # ),
+                # widget.Sep(
+                #     linewidth = 0,
+                #     padding = 15
+                # ),
                 widget.TextBox(
                     text=icons["volume"],
                     font = "Font Awesome 5 Free"
                 ),
                 widget.Volume(),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 15
-                ),
-                widget.TextBox(
-                    text=icons["download"],
-                    font = "Font Awesome 5 Free"
-                ),
-                widget.CheckUpdates(
-                       update_interval = 1800,
-                       distro = "Arch_checkupdates",
-                       display_format = "{updates} Updates",
-                       no_update_string = "Up to date",
-                       colour_no_updates = colors[2],
-                       colour_have_updates = colors[2],
-                       execute = terminal + ' -e sudo pacman -Syu'
-                ),
                 widget.Sep(
                     linewidth = 0,
                     padding = 15
@@ -411,7 +439,7 @@ screens = [
                     low_foreground = colors[3],
                     notify_below = 15,
                     update_interval = 25
-                ),
+                ), 
                 widget.Sep(
                     linewidth = 0,
                     padding = 15
@@ -439,6 +467,7 @@ screens = [
             28,
             background =  colors[1]
         ),
+        bottom=dock,
     ),
 ]
 
@@ -495,6 +524,10 @@ wmname = "LG3D"
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
+
+@hook.subscribe.startup
+def startup():
+    dock.show(False)
 
 # from http://qtile.readthedocs.org/en/latest/manual/config/hooks.html#automatic-floating-dialogs
 @hook.subscribe.client_new

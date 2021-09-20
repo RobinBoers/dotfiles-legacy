@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #nitrogen --restore &
-#feh --randomize --bg-fill /home/robin/Pictures/wallpapers/*
-feh --bg-fill /home/robin/Pictures/wallpapers/macos.jpg
+feh --randomize --bg-fill /home/robin/Pictures/wallpapers/*
+#feh --bg-fill /home/robin/Pictures/wallpapers/macos-light.jpg
 
 xcape -e 'Super_L=Alt_L|F1'
 xcape -e 'Alt_L=Control_L|Alt_L|Shift_L|F9'
@@ -22,6 +22,14 @@ setxkbmap -layout us -variant intl
 nm-applet &
 light-locker --no-lock-on-lid &
 
+gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
+gsettings set org.gnome.desktop.interface icon-theme "Adwaita"
+
+gtk-theme-switch2 /usr/share/themes/Adwaita
+
+xsettingsd -c /home/robin/.config/xsettingsd/qtile &
+
+killall dunst
 xfce4-power-manager &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 #dunst &
@@ -31,7 +39,7 @@ rsibreak &
 #plank &
 volumeicon &
 
-xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap & 
 
 xset b off
 

@@ -1,0 +1,9 @@
+Net/IconThemeName "Adwaita"
+Net/ThemeName "Adwaita"
+
+Gtk/FontName "Inter 11"
+
+Xft/Hinting 1
+Xft/HintStyle "hintslight"
+Xft/Antialias 1
+Xft/RGBA "rgb"

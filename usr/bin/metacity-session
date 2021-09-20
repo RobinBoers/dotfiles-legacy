@@ -25,17 +25,12 @@ fi
 python /home/robin/Scripts/hud-service.py &
 
 dockx &
-#/home/robin/Scripts/status.sh | lemonbar -g 1920x25 -B "#ff323030" -f "Ubuntu:size=11" -f 'Font Awesome 5 Free' -f 'Font Awesome 5 Brands' -f 'Font Awesome 5 Free Solid' &
+#/home/robin/Scripts/status.sh | lemonbar -g 1920x25 -B "#ff323030" -f "Ubuntu:size=11" -f 'Font Awesome 5 Free' -f 'Font Awesome 5 Brands' -f 'Font Awesome 5 Free Solid' & 
 tint2 &
-
 
 rsibreak &
 redshift &
 volumeicon &
-
-xfce4-power-manager &
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
-
 nm-applet &
 
 lxsession &
@@ -49,4 +44,15 @@ xset b off
 
 devilspie &
 
+xfce4-power-manager &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+
+gsettings set org.gnome.desktop.interface gtk-theme "Ambiance"
+gsettings set org.gnome.desktop.interface icon-theme "Humanity"
+
+gtk-theme-switch2 /usr/share/themes/Ambiance
+
+xsettingsd -c /home/robin/.config/xsettingsd/metacity &
+
 wait $wm_pid
+

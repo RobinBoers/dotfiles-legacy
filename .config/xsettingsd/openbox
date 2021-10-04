@@ -1,0 +1,7 @@
+Net/IconThemeName "Classic95"
+Net/ThemeName "Windows-95-1.0"
+
+Gtk/FontName "Helvetica 10"
+
+Xft/Hinting 0
+Xft/Antialias 0

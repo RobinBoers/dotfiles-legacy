@@ -1,6 +1,90 @@
-configuration {
-  show-icons:         true;
-  icon-theme:         "Papirus";
-  theme: "float";
+* {
+    background: #00000000;
 }
-element-icon { size: 2ch ; }
+element {
+    background-color: @background;
+}
+element normal.normal {
+    background-color: @background;
+}
+element normal.urgent {
+    background-color: @background;
+}
+element normal.active {
+    background-color: @background;
+}
+element selected.normal {
+    background-color: @background;
+}
+element selected.urgent {
+    background-color: @background;
+}
+element selected.active {
+    background-color: @background;
+}
+element alternate.normal {
+    background-color: @background;
+}
+element alternate.urgent {
+    background-color: @background;
+}
+element alternate.active {
+    background-color: @background;
+}
+element-text {
+    background-color: @background;
+}
+element-icon {
+    background-color: @background;
+}
+window {
+    background-color: rgba(230, 230, 230, 0.8);
+}
+mainbox {
+    background-color: @background;
+}
+message {
+    background-color: @background;
+}
+textbox {
+    background-color: @background;
+}
+listview {
+    background-color: @background;
+}
+scrollbar {
+    background-color: @background;
+}
+sidebar {
+    background-color: @background;
+}
+button {
+    background-color: @background;
+}
+button selected {
+    background-color: @background;
+}
+num-filtered-rows {
+    background-color: @background;
+}
+num-rows {
+    background-color: @background;
+}
+textbox-num-sep {
+    background-color: @background;
+}
+inputbar {
+    background-color: @background;
+}
+case-indicator {
+    background-color: @background;
+}
+entry {
+    background-color: @background;
+}
+prompt {
+    background-color: @background;
+}
+textbox-prompt-colon {
+    background-color: @background;
+}

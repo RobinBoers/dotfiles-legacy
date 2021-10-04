@@ -1,0 +1,167 @@
+
+set $mod Mod4
+font pango:Ubuntu Bold 8
+
+exec swayidle -w \
+          timeout 300 'swaylock -f -c 000000' \
+          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock -f -c 000000'
+
+input type:touchpad {
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+    dwt enabled
+}
+
+input * {
+    xkb_layout "us"
+    xkb_variant "intl"
+}
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod normal
+
+# start a terminal
+bindsym $mod+Return exec alacritty
+bindsym Control+Mod1+t exec alacritty
+
+# kill focused window
+bindsym $mod+q kill
+
+# start dmenu (a program launcher)
+# bindsym $mod+r exec --no-startup-id "dmenu_run -nf '#D8DEE8' -nb '#2F343F' -sb '#BF616A' -sf '#D8DEE8' -fn 'monospace-10' -p 'dmenu '"
+
+# Start Rofi (or dmenu) when pressing the Super key, because that is how it 
+# works on windows and that is how my workflow works :)
+bindcode --release 133 exec --no-startup-id "rofi -modi drun,run -show drun -theme qmenu"
+bindsym $mod+r exec --no-startup-id "rofi -modi drun,run -show run -theme qmenu"
+bindsym $mod+Shift+p exec "rofi-qackages -theme qmoji"
+bindsym $mod+Shift+e exec "rofimoji --action copy --selector-args '-theme qmoji'"
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move trough workspaces
+bindsym Mod1+Control+Right workspace next
+bindsym Mod1+Control+Left workspace prev
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+#bindsym $mod+f fullscreen toggle
+
+# Alt+Tab to cycle trough workspaces
+bindsym Mod1+Tab workspace next
+
+# Screenshot & colorpicker
+bindsym $mod+Shift+s exec --no-startup-id "grim /home/robin/Pictures/Screenshots/$(date +'%s_grim.png') -g "$(slurp)" | wl-copy"
+bindsym $mod+Shift+f exec --no-startup-id "/home/robin/Scripts/qr-screenshot-wayland.sh"
+
+# toggle tiling / floating
+bindsym $mod+f floating toggle
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# reload the configuration file
+bindsym Control+Mod1+r reload
+
+# exit i3 (logs you out of your X session)
+bindsym Control+Mod1+q exec "swaymsg exit"
+
+# same bindings, but for the arrow keys
+bindsym $mod+Control+Left resize grow width 10 px or 10 ppt
+bindsym $mod+Control+Down resize shrink height 10 px or 10 ppt
+bindsym $mod+Control+Up resize grow height 10 px or 10 ppt
+bindsym $mod+Control+Right resize shrink width 10 px or 10 ppt
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command i3status
+        position bottom
+        font pango:DejaVu Sans Mono 10
+}
+
+focus_follows_mouse yes
+title_align left
+default_border pixel 2
+hide_edge_borders none
+
+# clipboard
+exec wl-paste -t text --watch clipman store
+
+# volume keys
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym --locked XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% && $refresh_i3status
+bindsym --locked XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $refresh_i3status
+bindsym --locked XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym --locked XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# brightness
+bindsym --locked XF86MonBrightnessUp exec "xbacklight +5"
+bindsym --locked XF86MonBrightnessDown exec "xbacklight -10"
+
+# media keys
+bindsym --locked XF86AudioPlay exec "/usr/bin/playerctl play-pause"
+bindsym --locked XF86AudioPause exec "/usr/bin/playerctl pause"
+bindsym --locked XF86AudioNext exec "/usr/bin/playerctl next"
+bindsym --locked XF86AudioPrev exec "/usr/bin/playerctl previous"
+
+# autostart
+exec --no-startup-id lxsession
+exec --no-startup-id nm-applet
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id mako
+exec --no-startup-id autotiling
+exec --no-startup-id volumeicon
+exec --no-startup-id /home/robin/Scripts/random-wall.sh
+exec --no-startup-id clipman

@@ -17,10 +17,10 @@ general {
 }
 
 #order += "ipv6"
-order += "volume master"
-order += "disk /"
+#order += "disk /"
 order += "wireless _first_"
 #order += "ethernet _first_"
+order += "volume master"
 order += "battery all"
 #order += "load"
 #order += "memory"
@@ -28,17 +28,17 @@ order += "tztime local"
 #order += "cpu_usage"
 
 wireless _first_ {
-        format_up = "<span background='#a3be8c'> %essid: %ip </span>"
-        format_down = "<span background='#ff5555'> Disconnected </span>"
+        format_up = " %essid: %ip "
+        format_down = "<span color='red'> Disconnected </span>"
 }
 
 ethernet _first_ {
-        format_up = "<span background='#a3be8c'> %ip (%speed)</span>"
-        format_down = "<span background='#ff5555'> Disconnected</span>"
+        format_up = " %ip (%speed) "
+        format_down = "<span color='red'> Disconnected </span>"
 }
 
 battery all {
-        format = "<span background='#f59335'> %status %percentage </span>"
+        format = " %status %percentage "
         format_down = "No battery"
         status_chr = "CHR"
         status_bat = "BAT"
@@ -54,12 +54,12 @@ cpu_usage {
 }
 
 volume master {
-        format = "<span background='#ebcb8b'> ♪ %volume </span>"
-        format_muted = "<span background='#ff5555'> ♪ muted (%volume) </span>"
+        format = " ♪ %volume "
+        format_muted = " ♪ muted (%volume) "
 }
 
 disk "/" {
-        format = "<span background='#bd93f9'> %avail Available </span>"
+        format = " %avail Available "
 }
 
 load {
@@ -73,6 +73,6 @@ memory {
 }
 
 tztime local {
-        format = "<span background='#81a1c1'> %time </span>"
-        format_time = "%Y-%m-%d %H:%M"
+        format = " %time "
+        format_time = "%d-%m-%Y %H:%M"
 }

@@ -77,6 +77,7 @@ Plug 'itchyny/vim-gitbranch'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhinz/vim-startify'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 

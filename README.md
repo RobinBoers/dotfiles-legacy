@@ -2,13 +2,29 @@
 
 My dotfiles for various programs and setups.
 
+## Theming
+
+The GTK theme is set using `xsettingsd`. This way I can have multiple window managers with each another GTK theme. 
+
+I'm doing this because I have a Windows 98 clone, Unity clone and some other stuff configured, and I don't want to manually set the GTK theme each time I log into them.
+
+I'm not sure how to set the QT theme without a graphical program, so that just stays breeze or KvGnome because I'm lazy and don't use that many QT applications anyway.
+
 ## Setups
 
 I have different setups and configs for different use cases. These are the ones I use the most:
 
+### Sway setup
+
+My current setup. Adwaita, KvGnome for theming. Sworkstyle for dynamic workspace names, autotiling for autotiling (duh) and [swaybg-random](Scripts/swaybg-random.sh) for random wallpapers.
+
+[More info](.config/sway)
+
+![](.config/sway/screenshot.png)
+
 ### Qtile setup
 
-I'm using the default panel in this setup. I customized it to use the frontend-delight color theme. I use gaps because I like them. Keybindings for most regular stuff. Also keybinded the media buttons using playerctl and the brightness stuff with xbacklight. Using KvYaru for Qt and Yaru for GTK+. Using nitrogen for the wallpaper and Suru icons.
+I'm using the default panel in this setup. I customized it to use the frontend-delight color theme. I use gaps because I like them. Keybindings for most regular stuff. Also keybinded the media buttons using playerctl and the brightness stuff with xbacklight. Using KvGnome for Qt and Adwaita for GTK+. Using feh for the wallpaper and Adwaita icons.
 
 [More info](.config/qtile)
 
@@ -26,6 +42,8 @@ This version of my Qtile setup is exactly the same as the default version, but w
 
 I made a custom xsession using the Metacity window manager, DockBarX, tint2 and rofi. I wanted it to look like Unity. Ambiance GTK theme, KvAmbiance QT theme, Humanity icons.
 
+**NOTE: The Rofi theme is currently broken due to a update. Not sure how to fix it yet :)**
+
 [More info](usr/bin/)
 
 ![](usr/bin/screenshot.png)
@@ -40,14 +58,6 @@ The dock (plank) is on the left like in Unity and for the wallpaper I'm using ni
 [More info](.config/openbox)
 
 ![](.config/openbox/screenshot.png)
-
-### i3 setup
-
-For my i3 setup I use the default bar/panel (i3bar) that I customized a bit. I also added some keybindings for stuff. I use both dmenu and rofi. I made the themes for both match the i3bar theme. Also using nitrogen for the wallpaper here. For both the GTK+ and QT theme Im using Breeze. Terminal is Alacritty. Breeze icons.
-
-[More info](.config/i3)
-
-![](.config/i3/screenshot.png)
 
 ## Rofi themes
 

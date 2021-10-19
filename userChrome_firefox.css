@@ -6,9 +6,6 @@ go to about:config and change toolkit.legacyUserProfileCustomizations.stylesheet
 2. **Change about:blank color**:  
 go to about:config again an change browser.display.background_color to "#1b1c1d"
 
-3. **Revert UI back from Proton**:  
-go to about:config for the last time and change browser.proton.enabled to "false"
-
 */
 
 :root {

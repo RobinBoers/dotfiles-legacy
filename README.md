@@ -16,7 +16,7 @@ I have different setups and configs for different use cases. These are the ones 
 
 ### Sway setup
 
-My current setup. Adwaita, KvGnome for theming. Sworkstyle for dynamic workspace names, autotiling for autotiling (duh) and [swaybg-random](Scripts/swaybg-random.sh) for random wallpapers.
+My current setup. Adwaita, KvGnome for theming. Sworkstyle for dynamic workspace names, autotiling for autotiling (duh) and [swaybg-random](usr/share/swaybg-random) for random wallpapers.
 
 [More info](.config/sway)
 

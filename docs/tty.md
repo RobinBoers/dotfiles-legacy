@@ -37,6 +37,8 @@ end
 
 This color scheme is based on frontend delight. The color scheme I also use in other applications and Alacritty (my terminal).
 
+Notice that I didn't change the background color (usually #1b1c1d). That is because the color scheme gets only set after login. That means that the background color of the /etc/issue and login prompt will be black, but when I log in, it gets changed, and a ugly line is visible.
+
 ## Tmux config
 
 Tmux is a cool way to have "windows" in the TTY. It's like a text based window manager. My tmux config uses keybindings similair to my Openbox and Qtile configs. This does require a custom keymap, which is also set in `/etc/vconsole.conf`.

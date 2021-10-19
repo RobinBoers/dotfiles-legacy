@@ -20,17 +20,17 @@ alias ...='cd ..; cd ..;'
 alias ....='cd ..; cd ..; cd ..'
 
 export EDITOR=vim
-alias bash_aliases='vim ~/.bash_aliases'
+alias aliases='vim ~/.bash_aliases'
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias fishrc='vim ~/.config/fish/config.fish'
 alias vim='nvim'
-alias pacman='aura'
 
 alias :q="exit"
+alias pls="sudo (fc -ln -1)"
+alias random-wall="/home/robin/Scripts/random-wall.sh"
 
 alias neo='neofetch'
-alias shotcut='flatpak run org.shotcut.Shotcut'
 alias xampp='sudo /opt/lampp/lampp start'
 alias lampp='sudo /opt/lampp/manager-linux-x64.run'
 alias wampp='sudo /opt/lampp/manager-linux-x64.run'

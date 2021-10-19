@@ -253,6 +253,16 @@ def format_window_name(text):
         text = "Finder"
     if text == "Thunderbird":
         text = "Mozilla Thunderbird"
+    if text == "Libreoffice-calc":
+        text = "LibreOffice Calc"
+    if text == "Libreoffice-writer":
+        text = "LibreOffice Writer"
+    if text == "Libreoffice-impress":
+        text = "LibreOffice Impress"
+    if text == "Vlc":
+        text = "VLC Media Player"
+    if text == "Notes-up":
+        text = "Notes-Up"
     if "sherlock" in text:
         text = "Sherlock"
     return text
@@ -315,7 +325,13 @@ class Stretcher(base._TextBox):
         self.add_defaults(AppName.defaults)
 
 dock = bar.Bar([
-        Stretcher(),
+        widget.LaunchBar([('thunderbird', 'thunderbird', 'launch thunderbird'), ("firefox", "firefox", "launch firefox"), ("visual-studio-code", "code", "launch vscode"), ("spotify", "env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U", "launch spotify"), ("com.slack.Slack", "com.slack.Slack", "launch slack"), ("com.discordapp.Discord", "com.discordapp.Discord", "launch discord"), ("chromium", "chromium", "launch chromium")],
+            padding = 7,
+        ),
+        widget.Sep(
+            foreground = colors[7][0] + "50",
+            padding = 20
+        ),
         widget.TaskList(
             borderwidth = 0,
             max_title_width = 0,
@@ -324,150 +340,151 @@ dock = bar.Bar([
             markup_maximixed = "",
             markup_focused = "",
             markup_minimized = "",
-            background = colors[1],
-            #margin_x = 10,
-            padding = 1
+            padding = 3,
         ),
-        Stretcher()
+        widget.LaunchBar([(("system-file-manager", "nemo trash:///", "Finder"))], padding = 5, default_icon = "/usr/share/icons/Adwaita/48x48/places/user-trash.png")
     ],
     70,
-    background =  "#ffffff00"
+    background =  colors[1],
+    margin=[2,550,3,550],
+)
+
+top_panel = bar.Bar([
+        widget.Sep(
+            linewidth = 0,
+            padding = 22 #7
+        ),
+        widget.TextBox(
+            text=icons["logo"],
+            fontsize=18, #18
+            font = "Font Awesome 5 Brands"
+        ),
+        widget.Sep(
+            linewidth = 0,
+            padding = 22, #7
+            foreground = colors[1]
+        ),
+        AppName(
+                foreground = colors[2],
+                parse_text = format_window_name
+        ),
+        widget.Sep(
+            linewidth = 0,
+            padding = 17,
+            foreground = colors[1]
+        ),
+        widget.GroupBox(
+                fontsize = 12,
+                font = "SF Pro Text Regular",
+                padding = 9,
+                borderwidth = 0,
+                active = colors[2],
+                block_highlight_text_color = "#ffffff",
+                inactive = colors[2],
+                rounded = False,
+                highlight_color = colors[1],
+                highlight_method = "line",
+                
+                this_current_screen_border = colors[2],
+                this_screen_border = colors[6],
+                other_current_screen_border = colors[2],
+                other_screen_border = colors[6],
+
+                foreground = colors[2],
+                disable_drag = True,
+
+                urgent_alert_method = 'line',
+                urgent_border = colors[2],
+                urgent_text = colors[3]
+        ),
+        Stretcher(),
+        #widget.Systray(
+        #        padding = 5,
+        #        background = colors[1]
+        #),
+        #widget.Sep(
+        #    linewidth = 0,
+        #    padding = 15
+        #), 
+        widget.CheckUpdates(
+                update_interval = 1800,
+                distro = "Arch_checkupdates",
+                display_format = " ",
+                font = "Font Awesome 5 Free",
+                no_update_string = " ",
+                colour_no_updates = colors[2],
+                colour_have_updates = colors[2],
+                execute = terminal + '--hold -e sudo pacman -Syu',
+                padding = 15
+        ),
+        # widget.TextBox(
+        #     text=icons["light"],
+        #     font = "Font Awesome 5 Free"
+        # ),
+        # widget.Backlight(
+        #        backlight_name = "intel_backlight"
+        # ),
+        # widget.Sep(
+        #     linewidth = 0,
+        #     padding = 15
+        # ),
+        widget.TextBox(
+            text=icons["volume"],
+            font = "Font Awesome 5 Free"
+        ),
+        widget.Volume(),
+        widget.Sep(
+            linewidth = 0,
+            padding = 15
+        ),
+        widget.TextBox(
+            text=icons["battery"],
+            font = "Font Awesome 5 Free"
+        ),
+        widget.Battery(
+            charge_char = "",
+            discharge_char = "",
+            empty_char = "",
+            full_char = "",
+            unknown_char = "",
+            format = '{percent:2.0%} {char}',
+            show_short_text = False,
+            low_foreground = colors[3],
+            notify_below = 15,
+            update_interval = 25
+        ), 
+        widget.Sep(
+            linewidth = 0,
+            padding = 15
+        ),
+        # widget.Wlan(
+        #    interface = "wlp2s0",
+        #    format = '{essid}'
+        # ),
+        # widget.Sep(
+        #    linewidth = 0,
+        #    padding = 10
+        # ),
+        widget.Clock(
+            format = '%d-%m-%Y    %H:%M'
+        ),
+        widget.Sep(
+            linewidth = 0,
+            padding = 10
+        ),
+        widget.Sep(
+            linewidth = 0,
+            padding = 10
+        ),
+    ],
+    28,
+    background =  colors[1]
 )
 
 screens = [
     Screen(
-        top=bar.Bar([
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 22 #7
-                ),
-                widget.TextBox(
-                    text=icons["logo"],
-                    fontsize=18, #18
-                    font = "Font Awesome 5 Brands"
-                ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 22, #7
-                    foreground = colors[1]
-                ),
-                AppName(
-                       foreground = colors[2],
-                       parse_text = format_window_name
-                ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 17,
-                    foreground = colors[1]
-                ),
-                widget.GroupBox(
-                       fontsize = 12,
-                       font = "SF Pro Text Regular",
-                       padding = 9,
-                       borderwidth = 0,
-                       active = colors[2],
-                       block_highlight_text_color = "#ffffff",
-                       inactive = colors[2],
-                       rounded = False,
-                       highlight_color = colors[1],
-                       highlight_method = "line",
-                       
-                       this_current_screen_border = colors[2],
-                       this_screen_border = colors[6],
-                       other_current_screen_border = colors[2],
-                       other_screen_border = colors[6],
-
-                       foreground = colors[2],
-                       disable_drag = True,
-
-                       urgent_alert_method = 'line',
-                       urgent_border = colors[2],
-                       urgent_text = colors[3]
-                ),
-                Stretcher(),
-                widget.Systray(
-                     padding = 5,
-                     background = colors[1]
-                ),
-                #widget.Sep(
-                #    linewidth = 0,
-                #    padding = 15
-                #), 
-                widget.CheckUpdates(
-                       update_interval = 1800,
-                       distro = "Arch_checkupdates",
-                       display_format = " ",
-                       font = "Font Awesome 5 Free",
-                       no_update_string = " ",
-                       colour_no_updates = colors[2],
-                       colour_have_updates = colors[2],
-                       execute = terminal + '--hold -e sudo pacman -Syu',
-                       padding = 15
-                ),
-                # widget.TextBox(
-                #     text=icons["light"],
-                #     font = "Font Awesome 5 Free"
-                # ),
-                # widget.Backlight(
-                #        backlight_name = "intel_backlight"
-                # ),
-                # widget.Sep(
-                #     linewidth = 0,
-                #     padding = 15
-                # ),
-                widget.TextBox(
-                    text=icons["volume"],
-                    font = "Font Awesome 5 Free"
-                ),
-                widget.Volume(),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 15
-                ),
-                widget.TextBox(
-                    text=icons["battery"],
-                    font = "Font Awesome 5 Free"
-                ),
-                widget.Battery(
-                    charge_char = "",
-                    discharge_char = "",
-                    empty_char = "",
-                    full_char = "",
-                    unknown_char = "",
-                    format = '{percent:2.0%} {char}',
-                    show_short_text = False,
-                    low_foreground = colors[3],
-                    notify_below = 15,
-                    update_interval = 25
-                ), 
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 15
-                ),
-                # widget.Wlan(
-                #    interface = "wlp2s0",
-                #    format = '{essid}'
-                # ),
-                # widget.Sep(
-                #    linewidth = 0,
-                #    padding = 10
-                # ),
-                widget.Clock(
-                    format = '%d-%m-%Y    %H:%M'
-                ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 10
-                ),
-                widget.Sep(
-                    linewidth = 0,
-                    padding = 10
-                ),
-            ],
-            28,
-            background =  colors[1]
-        ),
-        bottom=dock,
+        top=top_panel,
+        #bottom=dock,
     ),
 ]
 
@@ -526,8 +543,11 @@ def autostart():
     subprocess.call([home])
 
 @hook.subscribe.startup
-def startup():
-    dock.show(False)
+def _():
+    #dock.show(False)
+    top_panel.window.window.set_property("TOP_PANEL", 1, "CARDINAL",
+    format=8)
+
 
 # from http://qtile.readthedocs.org/en/latest/manual/config/hooks.html#automatic-floating-dialogs
 @hook.subscribe.client_new

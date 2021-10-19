@@ -1,0 +1,41 @@
+export QT_QPA_PLATFORMTHEME=qt5ct
+export GTK_OVERLAY_SCROLLING=1
+
+xcape -e 'Super_L=Alt_L|F1'
+xcape -e 'Alt_L=Control_L|Alt_L|Shift_L|F9'
+
+if [ -n "$GTK_MODULES" ]
+then
+	  GTK_MODULES="$GTK_MODULES:unity-gtk-module"
+  else
+	    GTK_MODULES="unity-gtk-module"
+fi
+
+if [ -z "$UBUNTU_MENUPROXY" ]
+then
+	  UBUNTU_MENUPROXY=1
+fi
+
+lxsession &
+nm-applet &
+volumeicon &
+cbatticon -n &
+rsibreak &
+#dunst &
+/usr/lib/xfce4/notifyd/xfce4-notifyd &
+/var/lib/portmaster/portmaster-start notifier --data=/var/lib/portmaster &
+opensnap &
+redshift &
+xfce4-power-manager &
+picom &
+python /home/robin/Scripts/hud-service.py &
+
+setxkbmap -layout us -variant intl
+xset b off
+
+xmodmap ~/.Xmodmap & 
+
+xinput set-prop "Synaptics TM3336-001" "libinput Natural Scrolling Enabled" 1
+xinput set-prop "Synaptics TM3336-001" "libinput Tapping Enabled" 1
+
+

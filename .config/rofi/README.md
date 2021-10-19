@@ -26,5 +26,5 @@ A version of `dmenu.rasi` for my Qtile setup. [More info...](../qtile/)
 - `qmoji.rasi`:  
 A version of qmenu.rasi, but with the items vertical. Used for rofimoji and rofi-packages in my Qtile setup. [More info...](../qtile/)
 
-- `qmoji` and `qmenu` with macOS prefix:  
+- `qmoji.rasi` and `qmenu` with macOS prefix:  
 This is a macOS spotlight theme for Rofi that I use in my Mac style Qtile setup. [More info...](../qtile-macos/)

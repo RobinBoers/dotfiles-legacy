@@ -3,6 +3,14 @@
 This is my customized version of the Dribbblish theme. I added by own color scheme to it, and some fixes in the `user.css` file. You can see them below:
 
 ```
+.x-searchInput-searchInputInput {
+        border: none !important;
+}
+
+.main-navBar-navBarLink {
+        gap: 0px !important;
+}
+
 .RootlistItemFolder__arrow {
     display: none;
 }
@@ -17,6 +25,10 @@ This is my customized version of the Dribbblish theme. I added by own color sche
 
 .x-categoryCard-title, .x-heroCategoryCard-heroTitle {
     color: white !important;
+}
+
+.main-heroCard-card.collection-collectionEntityHeroCard-container.collection-collectionEntityHeroCard-likedSongs, .main-heroCard-cardMetadata a, .collection-collection-header *, .main-cardSubHeader-root {
+        color: white !important;
 }
 
 .x-heroCategoryCard-HeroCategoryCard > div, .x-categoryCard-CategoryCard > div {
@@ -35,8 +47,13 @@ This is my customized version of the Dribbblish theme. I added by own color sche
 
 .main-navBar-navBarItem .main-navBar-navBarLinkActive .collection-active-icon,
 .main-navBar-navBarItem .main-navBar-navBarLinkActive .home-active-icon,
-.main-navBar-navBarItem .main-navBar-navBarLinkActive .search-active-icon {
-    color: #ffffff;
+.main-navBar-navBarItem .main-navBar-navBarLinkActive .search-active-icon,
+.active .main-likedSongsButton-likedSongsIcon svg, .active .main-yourEpisodesButton-yourEpisodesIcon svg path,
+.main-navBar-entryPoints .active .main-collectionLinkButton-collectionLinkText,
+.main-rootlist-rootlistItemLink.main-rootlist-rootlistItemLinkActive *
+{
+    color: #ffffff !important;
+    fill: white !important;
 }
 
 .main-entityHeader-title,

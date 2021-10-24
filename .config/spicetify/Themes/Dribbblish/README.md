@@ -102,3 +102,5 @@ input:checked ~ .x-toggle-indicatorWrapper .x-toggle-indicator {
     color: #adadad !important;
 }
 ```
+
+![Screenshot](screenshot.png)

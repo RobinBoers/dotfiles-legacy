@@ -13,13 +13,13 @@
 
 /* Remove rounded corners on wayland */
 
-.titlebar,
+/* .titlebar,
 .titlebar .background {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
-}
+} */
 
 /*
  Decrease the size of head bars for non-CSD applications
@@ -27,11 +27,12 @@
  https://unix.stackexchange.com/questions/276951/how-to-change-the-titlebar-height-in-standard-gtk-apps-and-those-with-headerbars
 */
 
+/* x11 and xwayland windows */
 window.ssd headerbar.titlebar {
-    padding: 4px;
+    padding: 4px; 
     padding-right: 5px;
-    padding-left: 5px;
     min-height: 0;
+    /* remove border between titlebar and window */
     border: none;
 }
 
@@ -41,11 +42,13 @@ window.ssd headerbar.titlebar button.titlebutton {
     min-width: 0;
 }
 
+
+/* native wayland ssd windows */
 .default-decoration {
     padding: 4px;
     padding-right: 5px;
-    padding-left: 5px;
     min-height: 0;
+    /* remove border between titlebar and window */
     border: none;
 }
 
@@ -56,33 +59,14 @@ window.ssd headerbar.titlebar button.titlebutton {
 }
 
 decoration  {
-	transition: 0;
 	box-shadow: none;
-	margin: 0;
-	padding: 0;
 }
 decoration:backdrop  {
-	transition: 0;
 	box-shadow: none;
-	margin: 0;
-	padding: 0;
 }
-
-button.titlebutton.close {
-  display:none;
-}
-
-button.titlebutton.maximize {
-  display:none;
-}
-
-button.titlebutton.minimize {
-  display:none;
-}
-
 
 /* GTK3-mushrooms */
-headerbar, .default decoration, .titlebar {
+/* headerbar, .default decoration, .titlebar {
 	min-height: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -191,4 +175,4 @@ button.image-button {
 
 button.image-button image {
 	font-size: 12px;
-}
+} */

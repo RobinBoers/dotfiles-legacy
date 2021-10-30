@@ -1,0 +1,76 @@
+configuration {
+    show-icons: false;
+    display-drun: "";
+    drun-display-format: "{name}";
+    disable-history: false;
+    fullscreen: false;
+}
+
+* {
+    background-color: #285577;
+}
+window {
+    border:           2;
+    border-color: #4C7899;
+    padding: 5;
+    y-offset: -320px;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+textbox {
+    text-color: #ffffff;
+}
+listview {
+    fixed-height: 0;
+    spacing:      2px ;
+    scrollbar:    true;
+}
+element {
+    border:  0;
+    padding: 1px ;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal {
+    background-color: #285577;
+    text-color:       #ffffff;
+}
+element.selected {
+    background-color: #4C7899;
+    text-color:       #ffffff;
+}
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+button.selected {
+    background-color: #4C7899;
+    text-color:       #ffffff;
+}
+inputbar {
+    spacing:    0;
+    text-color: #ffffff;
+    background-color: #285577;
+    padding:    1px ;
+}
+case-indicator {
+    spacing:    0;
+    text-color: #ffffff;
+}
+entry {
+    spacing:    0;
+    text-color: #ffffff;
+}
+prompt {
+    spacing:    0;
+    text-color: #ffffff;
+}
+inputbar {
+    children:   [ entry,case-indicator ];
+}

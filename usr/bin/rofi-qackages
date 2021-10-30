@@ -1,6 +1,8 @@
 #!/bin/bash
 
-query=$( paru -Slq | rofi -theme qmoji -dmenu -location 0 -p "Package > " )
+query=$( paru -Slq | rofi -theme $1 -dmenu -location 0 -p "Package > " )
+
+# rofi -theme qmoji -dmenu -location 0 -p "Package > " 
 
 if [[ -n "$query" ]]; then
        alacritty -e paru -S $query

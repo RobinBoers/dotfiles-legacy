@@ -60,9 +60,13 @@ window.ssd headerbar.titlebar button.titlebutton {
 
 decoration  {
 	box-shadow: none;
+    margin: 0;
+    padding: 0;
 }
 decoration:backdrop  {
 	box-shadow: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* GTK3-mushrooms */
@@ -91,7 +95,7 @@ button.image-button.text-button,
 }
 button.text-button.image-button label {
 	padding: 0 2px;
-}
+}*/
 notebook > header.top tab,
 notebook > header.bottom tab {
 	padding: 0 5px;
@@ -132,6 +136,7 @@ popover:not(.emoji-picker) > *:not(grid) {
 tooltip * {
 	padding: 0px;
 }
+
 placessidebar row {
 	min-height: 29px;
 }
@@ -146,6 +151,7 @@ filechooser > box.search-bar, filechooser > box:last-child {
 filechooser > actionbar > revealer > box {
 	border-top: 1px solid alpha(#000, 0.15);
 }
+
 * {
 	-GtkDialog-action-area-border: 5;
 }
@@ -168,7 +174,7 @@ scrolledwindow undershoot.top,
 scrolledwindow undershoot.bottom {
 	background-image: none;
 }
-
+/*
 button.image-button {
 	padding: 0px 6px;
 }

@@ -146,7 +146,7 @@ These are the GUI apps I use on a day to day basis:
 
 My GTK apps use a special version of gtk3 called gtk3-classic. It has some patches that make adwaita theme smaller, remove CSD, and make GTK just better to use. Fot QT I'm using Kvantum Manager with KvGnome theme.
 
-Notes-Up is a markdown notes app I use often for my school, work and scripts for videos. This is how to set it up. Change viewer theme to "Modest" and add the CSS provided in `[.config/notes-up/viewer.css](../.config/notes-up/viewer.css)` to the Global style modifications. Also change the editor theme to solarized and the font to "DejaVu LGC Sans Code"
+Notes-Up is a markdown notes app I use often for my school, work and scripts for videos. This is how to set it up. Change viewer theme to "Modest" and add the CSS provided in [`.config/notes-up/viewer.css`](../.config/notes-up/viewer.css) to the Global style modifications. Also change the editor theme to solarized and the font to "DejaVu LGC Sans Code"
 
 ## 👀 Mentioned
 

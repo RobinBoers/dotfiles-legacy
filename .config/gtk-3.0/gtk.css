@@ -124,26 +124,3 @@ filechooser > box.search-bar, filechooser > box:last-child {
 filechooser > actionbar > revealer > box {
 	border-top: 1px solid alpha(#000, 0.15);
 }
-
-* {
-	-GtkDialog-action-area-border: 5;
-}
-messagedialog > box {
-	padding: 7px;
-}
-messagedialog buttonbox {
-	margin-top: -17px;
-}
-menu, .menu, .context-menu, tooltip {
-	border-radius: 0;
-}
-entry undershoot.left,
-entry undershoot.right,
-spinbutton:not(.vertical) undershoot.left,
-spinbutton:not(.vertical) undershoot.right,
-scrolledwindow undershoot.left,
-scrolledwindow undershoot.right,
-scrolledwindow undershoot.top,
-scrolledwindow undershoot.bottom {
-	background-image: none;
-}

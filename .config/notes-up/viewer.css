@@ -1,0 +1,38 @@
+/* Notes-Up Configuration:
+
+- Set viewer theme to "Modest"
+- Add this CSS to the Global style modifications
+
+Also set the editor theme to solarized with this font: DejaVu LGC Sans Code
+
+*/
+
+body {
+	margin-top: 30px;
+	font-family: Arial;
+}
+
+h2, h3, h4 {
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4, h5, h6 {
+	font-weight: bold;
+	font-size: initial;
+}
+
+hr {
+	border: 1px solid #FAFAFA;
+}
+
+body {
+	padding: 10px
+}
+
+code {
+  font-family: "DejaVu LGC Sans Code";
+}

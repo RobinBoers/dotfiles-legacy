@@ -1,6 +1,6 @@
 # Linux Dev Environment
 
-My setup for developing software on Linux. Python, NodeJS, webdev and PHP.
+My setup for developing software on Linux. Python, NodeJS, Elixir, webdev and PHP.
 
 ## 🐧 Distro
 
@@ -10,13 +10,13 @@ I mostly just stick to the default repo's and AUR because I can manage all my up
 
 ## 🖥️ Desktop Environment
 
-My DE of choice was Ubuntu Unity, but since that isn't available on Arch Linux I did the next best thing: build my own Unity. I have taken all the things I like about Unity, and put them into Qtile. Qtile is a tiling window manager. I have a HUD and a Spotlight style search. I don't have a dock at all since all the windows are visible at all times.
+My DE of choice was Ubuntu Unity, but since that isn't available on Arch Linux I did the next best thing: build my own Unity. I have taken all the things I like about Unity, and put them into Sway. Sway is a tiling window manager. I have a HUD and a Spotlight style search.
 
 I intentionally decided to hide the launcher on the left, because in Qtile all open windows are visible at all times, so a taskbar or launcher isn't needed.
 
 ## 🦊 Web browsers
 
-For most webbrowsing I'm using Firefox. I absolutly HATE the new Proton design, so I made a Firefox userChrome.css theme that combines [Wavefox](https://github.com/QNetITQ/WaveFox) and [Lepton](https://github.com/black7375/Firefox-UI-Fix).
+For most webbrowsing I'm using Firefox. I absolutly HATE the new Proton design, so I changed it back to the old Photon design with a few tweaks in `userChrome.css` and this firefox theme: <https://addons.mozilla.org/en-US/firefox/addon/photon-colors/>
 
 I also use Chromium to test my projects in another browser and if I need to use some Chrome-only app or API.
 
@@ -32,7 +32,7 @@ This removes the weird white corners (when using CSD) in some window managers
 7. Change `toolkit.legacyUserProfileCustomizations.stylesheets` to true
 8. Open your Firefox config (~/.mozilla/firefox/*default-release)
 9. Create a new folder named `chrome`
-10. Move the `user.js` file from [wavefox-lepton](https://github.com/RobinBoers/wavefox-lepton) to your Firefox config folder, and the rest of the files (from the repo) into the `chrome` folder
+10. Move the `user.js` file from [firefox-tweaks](https://github.com/RobinBoers/firefox-tweaks) to your Firefox config folder, and the rest of the files (from the repo) into the `chrome` folder
 
 ### Browser extensions
 
@@ -126,7 +126,7 @@ My favorite font is [DejaVu Sans Mono](https://github.com/dejavu-fonts/dejavu-fo
 These are the GUI apps I use on a day to day basis:
 
 - **Thunderbird:** Mail client
-- **Notes-Up:** Markdown Notes
+- **Notes-Up:** Markdown notes
 - **Rofi:** Desktop and run launcher
 - **Nemo:** File manager
 - **Spotify:** Music app (adblock version for AUR)
@@ -146,8 +146,11 @@ These are the GUI apps I use on a day to day basis:
 
 My GTK apps use a special version of gtk3 called gtk3-classic. It has some patches that make adwaita theme smaller, remove CSD, and make GTK just better to use. Fot QT I'm using Kvantum Manager with KvGnome theme.
 
+Notes-Up is a markdown notes app I use often for my school, work and scripts for videos. This is how to set it up. Change viewer theme to "Modest" and add the CSS provided in [`.config/notes-up/viewer.css`](../.config/notes-up/viewer.css) to the Global style modifications. Also change the editor theme to solarized and the font to "DejaVu LGC Sans Code"
+
 ## 👀 Mentioned
 
+- [firefox-tweaks](https://github.com/RobinBoers/firefox-tweaks) - Firefox theme
 - [wavefox-lepton](https://github.com/RobinBoers/wavefox-lepton) - Firefox theme
 - [frontend-delight-vscode](https://github.com/RobinBoers/frontend-delight-vscode) - VSCode theme
 - [CopyPasta](https://github.com/RobinBoers/CopyPasta) - GitHub Copilot at home

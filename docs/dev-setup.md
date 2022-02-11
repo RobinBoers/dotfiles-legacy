@@ -1,18 +1,10 @@
 # Linux Dev Environment
 
-My setup for developing software on Linux. Python, NodeJS, Elixir, webdev and PHP.
+My setup for developing software on Linux. Python, NodeJS, Elixir, Phoenix Framework, webdev and PHP.
 
 ## 🐧 Distro
 
-My current distro of choice is Arch Linux. I chose Arch because it has all the software I will ever need and the newest versions of all my apps.
-
-I mostly just stick to the default repo's and AUR because I can manage all my updates at once via the commandline that way. But if software isn't available there or unstable my favorite cross-distro packaging formats are Flatpak and AppImage.
-
-## 🖥️ Desktop Environment
-
-My DE of choice was Ubuntu Unity, but since that isn't available on Arch Linux I did the next best thing: build my own Unity. I have taken all the things I like about Unity, and put them into Sway. Sway is a tiling window manager. I have a HUD and a Spotlight style search.
-
-I intentionally decided to hide the launcher on the left, because in Qtile all open windows are visible at all times, so a taskbar or launcher isn't needed.
+My current distro of choice is elementaryOS. I chose elementary because has a nice polished desktop, is very stable and has a large choice of apps via their Flatpak store.
 
 ## 🦊 Web browsers
 
@@ -20,19 +12,7 @@ For most webbrowsing I'm using Firefox. I absolutly HATE the new Proton design, 
 
 I also use Chromium to test my projects in another browser and if I need to use some Chrome-only app or API.
 
-Firefox setup:
-
-1. Open `about:config`
-2. Click "Accept Risk and Continue"
-3. Change `mozilla.widget.use-argb-visuals` to true  
-This removes the weird white corners (when using CSD) in some window managers
-4. Change `svg.context-properties.content.enabled` to true
-5. Change `layout.css.color-mix.enabled` to true
-6. Change `browser.tabs.tabMinWidth` to 112
-7. Change `toolkit.legacyUserProfileCustomizations.stylesheets` to true
-8. Open your Firefox config (~/.mozilla/firefox/*default-release)
-9. Create a new folder named `chrome`
-10. Move the `user.js` file from [firefox-tweaks](https://github.com/RobinBoers/firefox-tweaks) to your Firefox config folder, and the rest of the files (from the repo) into the `chrome` folder
+See my [firefox-tweaks](https://github.com/RobinBoers/firefox-tweaks) repo for my current Firefox setup.
 
 ### Browser extensions
 
@@ -60,7 +40,6 @@ CLI tools:
 - **cmatrix:** Showing my friends I'm a real bad hacker
 - **htop:** Taskmanager
 - **diff-so-fancy:** Nice git diff
-- **paru:** AUR helper
 - **youtube-dl:** Download videos
 - **fzf:** Find files
 - **vsce:** Packaging tool for VSCode extensions
@@ -68,16 +47,14 @@ CLI tools:
 - **uflash:** Flash Python onto the BBC micro:bit
 - **qrencode:** Generate qr codes
 - **zbar:** Scan qr codes
-- **playerctl:** Control media playback
 - **npm:** Package manager for NodeJS
 - **nmap:** Scan network information
-- **aura:** Package manager and AUR helper
 
 ## 💾 Code editor
 
 My favorite code editor is VSCode. I did use both Brackets and Atom for some time, but VSCode is just the perfect fit for me. It loads quick and has lots of useful extensions.
 
-My VSCode extensions and config are synced using my GitHub account.
+VSCode also syncs my setup across machines using settings sync with my GitHub account.
 
 ### Extensions
 
@@ -125,11 +102,11 @@ My favorite font is [DejaVu Sans Mono](https://github.com/dejavu-fonts/dejavu-fo
 
 These are the GUI apps I use on a day to day basis:
 
-- **Thunderbird:** Mail client
-- **Notes-Up:** Markdown notes
+- **Geary:** Mail client
+- **Notes-Up:** Markdown Notes
 - **Rofi:** Desktop and run launcher
 - **Nemo:** File manager
-- **Spotify:** Music app (adblock version for AUR)
+- **Spotify:** Music app ([adblock](https://github.com/abba23/spotify-adblock) version)
 - **Slack & Discord:** Chatting
 - **Feh:** Image viewer & wallpaper setter
 - **Leafpad:** GUI text editor
@@ -137,11 +114,8 @@ These are the GUI apps I use on a day to day basis:
 - **Portmaster:** Firewall
 - **Alacritty:** Terminal emulator
 - **Ciano:** File converter
-- **Feedreader:** RSS reader
 - **VLC media player:** Media player
-- **Sherlock:** IP information
 - **Lockwise:** Password manager
-- **LookBook:** Icon finder
 - **Tofu:** 2FA authenticator
 
 My GTK apps use a special version of gtk3 called gtk3-classic. It has some patches that make adwaita theme smaller, remove CSD, and make GTK just better to use. Fot QT I'm using Kvantum Manager with KvGnome theme.
@@ -151,7 +125,6 @@ Notes-Up is a markdown notes app I use often for my school, work and scripts for
 ## 👀 Mentioned
 
 - [firefox-tweaks](https://github.com/RobinBoers/firefox-tweaks) - Firefox theme
-- [wavefox-lepton](https://github.com/RobinBoers/wavefox-lepton) - Firefox theme
 - [frontend-delight-vscode](https://github.com/RobinBoers/frontend-delight-vscode) - VSCode theme
 - [CopyPasta](https://github.com/RobinBoers/CopyPasta) - GitHub Copilot at home
 

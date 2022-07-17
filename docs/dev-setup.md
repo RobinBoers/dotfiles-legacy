@@ -4,7 +4,7 @@ My setup for developing software on Linux. Python, NodeJS, Elixir, Phoenix Frame
 
 ## 🐧 Distro
 
-My current distro of choice is elementaryOS. I chose elementary because has a nice polished desktop, is very stable and has a large choice of apps via their Flatpak store.
+My current distro of choice is Arch Linux. I used to use elementaryOS, but every time I try it I find out the MacOS workflow just isn't for me. I'm currently running Arch with Sway and minimal packages. It keeps my system quick and responsive and I like the workflow way better.
 
 ## 🦊 Web browsers
 
@@ -103,17 +103,16 @@ My favorite font is [DejaVu Sans Mono](https://github.com/dejavu-fonts/dejavu-fo
 These are the GUI apps I use on a day to day basis:
 
 - **Geary:** Mail client
-- **Notes-Up:** Markdown Notes
+- **Obbidian:** Markdown Notes
 - **Rofi:** Desktop and run launcher
 - **Nemo:** File manager
 - **Spotify:** Music app ([adblock](https://github.com/abba23/spotify-adblock) version)
 - **Slack & Discord:** Chatting
 - **Feh:** Image viewer & wallpaper setter
-- **Leafpad:** GUI text editor
+- **Mousepad:** GUI text editor
 - **FileZilla:** FTP client
 - **Portmaster:** Firewall
 - **Alacritty:** Terminal emulator
-- **Ciano:** File converter
 - **VLC media player:** Media player
 - **Lockwise:** Password manager
 - **Tofu:** 2FA authenticator
